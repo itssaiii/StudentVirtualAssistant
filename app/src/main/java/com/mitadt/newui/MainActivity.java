@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.view.animation.Animation;
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             public void run(){
                 try {
 
-                    sleep(3000);
+                    sleep(4000);
                 }
                 catch (Exception e){
                     e.printStackTrace();

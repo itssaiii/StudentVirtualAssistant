@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1035062958555",
+    "project_id": "studentvirtualassistant-594a3",
+    "storage_bucket": "studentvirtualassistant-594a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035062958555:android:71df71cb0363df7893affe",
+        "android_client_info": {
+          "package_name": "com.mitadt.newui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035062958555-pat9qau5ib3r4lu1gfruog2o4vvou92s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyTObnkROOod2HpkXWcH2nJORQe0Oj3mI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035062958555-pat9qau5ib3r4lu1gfruog2o4vvou92s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
