@@ -36,7 +36,7 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="E-mail"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:paddingLeft="10dp"
         android:shadowColor="#F6EBEB"
         android:textColorHint="#807373"
@@ -57,7 +57,7 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:paddingLeft="10dp"
 
         android:shadowColor="#F6EBEB"
