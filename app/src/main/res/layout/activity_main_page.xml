@@ -15,7 +15,8 @@
         android:background="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/whitelogo"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView2"

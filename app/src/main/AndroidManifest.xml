@@ -8,13 +8,27 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-
         android:theme="@style/Theme.NewUi">
-        <activity android:name=".MainPage"
-            android:label="MainPage">
+        <activity android:name=".RegisterPortal">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".login_design"
+            android:label="@string/title_activity_login_design"
+            android:theme="@style/Theme.NewUi.NoActionBar" />
+        <activity
+            android:name=".LoginDesign"
+            android:label="@string/title_activity_login_design"
+            android:theme="@style/Theme.NewUi.NoActionBar" />
+        <activity
+            android:name=".MainPage"
+            android:label="MainPage" />
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
