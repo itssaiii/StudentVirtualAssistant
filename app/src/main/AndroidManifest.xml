@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewUi">
+        <activity android:name=".Register"></activity>
         <activity android:name=".RegisterPortal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +20,7 @@
         <activity
             android:name=".login_design"
             android:label="@string/title_activity_login_design"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.NewUi.NoActionBar" />
         <activity
             android:name=".LoginDesign"

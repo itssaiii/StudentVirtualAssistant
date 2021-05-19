@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterPortal" >
+    android:visibility="visible"
+    tools:context=".RegisterPortal">
 
 
     <ImageView
@@ -14,8 +15,8 @@
 
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/canvabg"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteX="-133dp"
+        tools:layout_editor_absoluteY="-16dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -27,20 +28,24 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.255" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:layout_constraintVertical_bias="0.049" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/fullName"
         android:layout_width="387dp"
-        android:layout_height="53dp"
+        android:layout_height="49dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/rounded_corner"
-        android:paddingLeft="45dp"
+        android:drawableLeft="@drawable/personsmallicon"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
         android:ems="10"
         android:hint="Full Name"
         android:inputType="textPersonName"
+
         android:shadowColor="#F6EBEB"
         android:textColorHint="#807373"
         android:textSize="22sp"
@@ -51,35 +56,35 @@
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="386dp"
-        android:layout_height="56dp"
+        android:layout_height="49dp"
         android:background="@drawable/rounded_corner"
 
         android:drawableLeft="@drawable/emailicon"
-        android:paddingLeft="10dp"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
         android:shadowColor="#F6EBEB"
         android:textColorHint="#635C5C"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/fullName"
         app:layout_constraintVertical_bias="0.05" />
 
     <EditText
         android:id="@+id/EditTextPass"
         android:layout_width="384dp"
-        android:layout_height="51dp"
+        android:layout_height="49dp"
         android:background="@drawable/rounded_corner"
         android:drawableLeft="@drawable/passicon"
-        android:paddingLeft="10dp"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:paddingLeft="10dp"
         android:shadowColor="#F6EBEB"
         android:textColorHint="#756A6A"
         android:textSize="22sp"
@@ -98,7 +103,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView16"
-        app:layout_constraintVertical_bias="0.057"
+        app:layout_constraintVertical_bias="0.026"
         app:srcCompat="@drawable/logocropped" />
 
     <Button
@@ -117,7 +122,7 @@
         app:layout_constraintVertical_bias="0.142" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/optionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Already have an Account? Sign-In"
@@ -128,15 +133,17 @@
         app:layout_constraintTop_toBottomOf="@+id/registerButton"
         app:layout_constraintVertical_bias="0.036" />
 
-    <ImageView
-        android:id="@+id/imageView17"
-        android:layout_width="41dp"
-        android:layout_height="42dp"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.327"
-        app:srcCompat="@drawable/personicon" />
+        app:layout_constraintTop_toBottomOf="@+id/optionText"
+        app:layout_constraintVertical_bias="0.28" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
