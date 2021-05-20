@@ -22,9 +22,10 @@
         android:layout_height="136dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.09"
+        app:layout_constraintVertical_bias="0.026"
         app:srcCompat="@drawable/logocropped" />
 
     <EditText
@@ -92,10 +93,9 @@
         android:text="Sign-In"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logPassword"
-        app:layout_constraintVertical_bias="0.121" />
+        app:layout_constraintVertical_bias="0.195" />
 
     <TextView
         android:id="@+id/RegOptionText"
@@ -121,5 +121,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/RegOptionText"
         app:layout_constraintVertical_bias="0.256" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Paasword? Click Here"
+        android:textColor="#F1D90C"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/SignInBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logPassword"
+        app:layout_constraintVertical_bias="0.295" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

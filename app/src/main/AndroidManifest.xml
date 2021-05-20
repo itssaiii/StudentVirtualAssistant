@@ -9,7 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewUi">
-        <activity android:name=".Register"></activity>
+        <activity
+            android:name=".login"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.NewUi.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Register" />
         <activity android:name=".RegisterPortal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

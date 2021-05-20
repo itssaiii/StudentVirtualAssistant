@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 finally {
-                    Intent newIntent = new Intent(MainActivity.this, RegisterPortal.class);
+                    Intent newIntent = new Intent(MainActivity.this, login_design.class);
                     startActivity(newIntent);
                     finish();
                 }

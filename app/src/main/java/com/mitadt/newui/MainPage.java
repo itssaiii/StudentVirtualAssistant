@@ -20,7 +20,7 @@ public class MainPage extends AppCompatActivity {
 
     public void SignOut(View view){
         FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(getApplicationContext(),RegisterPortal.class));
+        startActivity(new Intent(getApplicationContext(),login_design.class));
         finish();
     }
 

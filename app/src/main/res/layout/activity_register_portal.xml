@@ -35,16 +35,16 @@
 
     <EditText
         android:id="@+id/fullName"
-        android:layout_width="387dp"
-        android:layout_height="49dp"
+        android:layout_width="330dp"
+        android:layout_height="47dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/rounded_corner"
         android:drawableLeft="@drawable/personsmallicon"
         android:drawablePadding="10dp"
-        android:paddingLeft="10dp"
         android:ems="10"
         android:hint="Full Name"
         android:inputType="textPersonName"
+        android:paddingLeft="10dp"
 
         android:shadowColor="#F6EBEB"
         android:textColorHint="#807373"
@@ -55,8 +55,8 @@
 
     <EditText
         android:id="@+id/editTextEmail"
-        android:layout_width="386dp"
-        android:layout_height="49dp"
+        android:layout_width="330dp"
+        android:layout_height="47dp"
         android:background="@drawable/rounded_corner"
 
         android:drawableLeft="@drawable/emailicon"
@@ -76,8 +76,8 @@
 
     <EditText
         android:id="@+id/EditTextPass"
-        android:layout_width="384dp"
-        android:layout_height="49dp"
+        android:layout_width="330dp"
+        android:layout_height="47dp"
         android:background="@drawable/rounded_corner"
         android:drawableLeft="@drawable/passicon"
         android:drawablePadding="10dp"
@@ -108,8 +108,8 @@
 
     <Button
         android:id="@+id/registerButton"
-        android:layout_width="115dp"
-        android:layout_height="60dp"
+        android:layout_width="111dp"
+        android:layout_height="49dp"
         android:background="@drawable/button_round"
         android:text="Register"
         android:textColor="#EFE6E6"

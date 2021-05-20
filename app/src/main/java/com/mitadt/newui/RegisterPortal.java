@@ -59,6 +59,12 @@ public class RegisterPortal extends AppCompatActivity {
             public void onClick(View v) {
                 String email = mEmailId.getText().toString().trim();  //storing the email in form of string
                 String password = mPassword.getText().toString().trim(); //storing the password in form of a string
+                String fname = mFullName.getText().toString().trim();
+
+                if(TextUtils.isEmpty(fname)){
+                    mFullName.setError(("Full Name is required"));
+                    return;
+                }
 
                 if(TextUtils.isEmpty(email)){ //checking whether the email text is empty or not
                     mEmailId.setError("E-mail Id is required");
@@ -95,7 +101,7 @@ public class RegisterPortal extends AppCompatActivity {
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),login_design.class));
+                startActivity(new Intent(getApplicationContext(), login_design.class));
                 finish();
             }
         });
