@@ -24,12 +24,31 @@
         android:layout_width="136dp"
         android:layout_height="58dp"
         android:onClick="SignOut"
+        android:shadowColor="#7E4949"
         android:text="SignOut"
         android:textSize="18sp"
+        app:backgroundTint="#2E1010"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.425"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.908" />
+        app:layout_constraintVertical_bias="0.139"
+        app:rippleColor="#B6B3B3"
+        app:strokeColor="#AE9E9E" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="141dp"
+        android:layout_height="76dp"
+        android:onClick="otpVerify"
+        android:text="Otp Verify"
+        android:textColor="#E6DEDE"
+        app:backgroundTint="#2A0965"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signout"
+        app:layout_constraintVertical_bias="0.132" />
 </androidx.constraintlayout.widget.ConstraintLayout>

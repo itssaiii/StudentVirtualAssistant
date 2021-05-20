@@ -66,6 +66,7 @@ public class login_design extends AppCompatActivity {
                         if(task.isSuccessful()){
                             Toast.makeText(login_design.this, "LogGED-In Successfully", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(),MainPage.class));
+
                         }
                         else{
                             Toast.makeText(login_design.this, "Error!"+ task.getException().getMessage(), Toast.LENGTH_SHORT).show();

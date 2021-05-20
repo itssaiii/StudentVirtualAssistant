@@ -45,4 +45,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.google.firebase:firebase-database:19.7.0'
     implementation 'com.google.firebase:firebase-auth:20.0.4'
+    //OTP VIEW DEPENDENCY
+    implementation 'com.chaos.view:pinview:1.4.3'
 }

@@ -128,7 +128,6 @@
         android:layout_height="wrap_content"
         android:text="Forgot Paasword? Click Here"
         android:textColor="#F1D90C"
-        android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@+id/SignInBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
