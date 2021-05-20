@@ -30,5 +30,10 @@ public class MainPage extends AppCompatActivity {
         finish();
     }
 
+    public void forgotPass(View view){
+        startActivity(new Intent(getApplicationContext(),ForgotPass.class));
+        finish();
+    }
+
 
 }
