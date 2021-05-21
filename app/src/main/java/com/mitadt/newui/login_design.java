@@ -39,6 +39,12 @@ public class login_design extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar2);
         GotoReg = findViewById(R.id.RegOptionText);
 
+        if(fAuth.getCurrentUser()!=null)
+        {
+            startActivity(new Intent(getApplicationContext(),MainPage.class));
+            finish();
+        }
+
         LogInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,6 +72,7 @@ public class login_design extends AppCompatActivity {
                         if(task.isSuccessful()){
                             Toast.makeText(login_design.this, "LogGED-In Successfully", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(),MainPage.class));
+                            finish();
 
                         }
                         else{

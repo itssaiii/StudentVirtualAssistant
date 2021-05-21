@@ -64,6 +64,7 @@
         android:shadowColor="#F6EBEB"
         android:textColorHint="#807373"
         android:textSize="22sp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"

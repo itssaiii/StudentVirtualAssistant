@@ -75,6 +75,28 @@
         app:layout_constraintVertical_bias="0.05" />
 
     <EditText
+        android:id="@+id/PhoneNumber"
+        android:layout_width="330dp"
+        android:layout_height="47dp"
+        android:background="@drawable/rounded_corner"
+
+        android:drawableLeft="@drawable/phoneicon"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:paddingLeft="10dp"
+        android:shadowColor="#F6EBEB"
+        android:textColorHint="#635C5C"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <EditText
         android:id="@+id/EditTextPass"
         android:layout_width="330dp"
         android:layout_height="47dp"
@@ -90,8 +112,9 @@
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneNumber"
         app:layout_constraintVertical_bias="0.058" />
 
     <ImageView

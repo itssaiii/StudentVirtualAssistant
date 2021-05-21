@@ -13,11 +13,15 @@
         android:orientation="vertical"
         android:padding="30dp">
 
-        <ImageView
+
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:src="@drawable/closeicon" />
+            android:src="@drawable/closeicon"
+            android:background="@drawable/border"
+            android:onClick="CloseOtpScreen"/>
+
+
 
         <TextView
             android:id="@+id/otptext"
@@ -49,7 +53,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:gravity="center"
-            android:text="Enter the One Time Password sent to your mail Id"
+            android:text="Enter the One Time Password sent to your Phone-Number"
             android:textSize="18sp"
             android:textStyle="bold" />
 
