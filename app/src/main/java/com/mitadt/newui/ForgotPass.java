@@ -2,10 +2,13 @@ package com.mitadt.newui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthProvider;
@@ -16,6 +19,7 @@ public class ForgotPass extends AppCompatActivity {
     EditText mPhoneNumber;
     Button GenerateOtp;
     FirebaseAuth fAuth;
+    ProgressBar progressBar;
 
 
     @Override
@@ -33,15 +37,27 @@ public class ForgotPass extends AppCompatActivity {
             public void onClick(View v) {
                 String num = mPhoneNumber.getText().toString().trim();
 
-                if(!num.isEmpty()){
-                    if (num.length()==10){
-
-                        
-                    }
+                if(num.isEmpty()){
+                    mPhoneNumber.setError("Phone Number is required");
+                    return;
                 }
+                if(num.length()<10){
+                    mPhoneNumber.setError("Phone Number must contain 10 digits");
+                    return;
+                }
+                if (num.length()>10)
+                {
+                    mPhoneNumber.setError("Phone Number must contain 10 digits");
+                    return;
+                }
+
+                Intent intent = new Intent(getApplicationContext(),VerifyOtp.class);
+                intent.putExtra("phoneNo",num);
+                startActivity(intent);
 
 
             }
         });
+
     }
 }

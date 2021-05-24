@@ -28,7 +28,7 @@ import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
 
-public class VerifyOtp extends AppCompatActivity {
+public class otpAfterRegister extends AppCompatActivity {
 
     public String NumberEnteredByUser,verificationCodeBySystem;
     Button VerifyButton;
@@ -52,8 +52,8 @@ public class VerifyOtp extends AppCompatActivity {
 
 
 
-        VerifyButton = findViewById(R.id.btnVerify);
-        phoneEnteredByUser = findViewById(R.id.EnterCode);
+        VerifyButton = findViewById(R.id.otpAfterRegBtn);
+        phoneEnteredByUser = findViewById(R.id.EnterCodeForRegister);
         auth = FirebaseAuth.getInstance();
 
 
@@ -89,16 +89,16 @@ public class VerifyOtp extends AppCompatActivity {
 
     private void sign_in(PhoneAuthCredential credential) {
         FirebaseAuth auth = FirebaseAuth.getInstance();
-        auth.signInWithCredential(credential).addOnCompleteListener(VerifyOtp.this, new OnCompleteListener<AuthResult>() {
+        auth.signInWithCredential(credential).addOnCompleteListener(otpAfterRegister.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful())
                 {
-                    Toast.makeText(VerifyOtp.this, "UserSignedInSuccessfully", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(),ResetPassword.class));
+                    Toast.makeText(otpAfterRegister.this, "UserSignedInSuccessfully", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(getApplicationContext(),MainPage.class));
                 }
                 else {
-                    Toast.makeText(VerifyOtp.this,task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(otpAfterRegister.this,task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -115,7 +115,7 @@ public class VerifyOtp extends AppCompatActivity {
 
                             @Override
                             public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
-                                Toast.makeText(VerifyOtp.this, "Verification Completed", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(otpAfterRegister.this, "Verification Completed", Toast.LENGTH_SHORT).show();
                                 String code = phoneAuthCredential.getSmsCode();
                                 if (code != null) {
                                     finishEverything(code);
@@ -126,14 +126,14 @@ public class VerifyOtp extends AppCompatActivity {
                             public void onVerificationFailed(FirebaseException e) {
                                 //Toast.makeText(VerifyOtp.this, "Verification Failed", Toast.LENGTH_SHORT).show();
                                 //Toast.makeText(VerifyOtp.this, e, Toast.LENGTH_SHORT).show();
-                                Toast.makeText(VerifyOtp.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(otpAfterRegister.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
                             public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                                 super.onCodeSent(s, forceResendingToken);
                                 verificationCodeBySystem = s;
-                                Toast.makeText(VerifyOtp.this, "Code sent", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(otpAfterRegister.this, "Code sent", Toast.LENGTH_SHORT).show();
                             }
                         })          // OnVerificationStateChangedCallbacks
                         .build();
@@ -141,4 +141,3 @@ public class VerifyOtp extends AppCompatActivity {
 
     }
 }
-

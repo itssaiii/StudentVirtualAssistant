@@ -41,7 +41,6 @@
         android:id="@+id/button"
         android:layout_width="141dp"
         android:layout_height="76dp"
-        android:onClick="otpVerify"
         android:text="Otp Verify"
         android:textColor="#E6DEDE"
         app:backgroundTint="#2A0965"

@@ -18,8 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/closeicon"
-            android:background="@drawable/border"
-            android:onClick="CloseOtpScreen"/>
+            android:background="@drawable/border" />
 
 
 
@@ -58,7 +57,7 @@
             android:textStyle="bold" />
 
         <com.chaos.view.PinView
-            android:id="@+id/EnterCode"
+            android:id="@+id/EnterCodeForRegister"
             style="@style/PinWidget.PinView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -74,7 +73,7 @@
             app:lineColor="#1E06FD" />
 
         <Button
-            android:id="@+id/btnVerify"
+            android:id="@+id/otpAfterRegBtn"
             android:layout_width="146dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -85,11 +84,5 @@
             android:textSize="18dp"
             android:textStyle="bold|italic"
             app:backgroundTint="#D8D410" />
-
-
-
     </LinearLayout>
-
-
 </ScrollView>
-
