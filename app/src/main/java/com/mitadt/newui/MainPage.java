@@ -35,5 +35,10 @@ public class MainPage extends AppCompatActivity {
         finish();
     }
 
+    public void ChooseField(View view){
+        startActivity(new Intent(getApplicationContext(),ChooseDomain.class));
+        finish();
+    }
+
 
 }

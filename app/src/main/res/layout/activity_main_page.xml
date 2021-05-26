@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ED0606"
+    android:background="@drawable/firebg"
     tools:context=".MainPage">
 
     <ImageView
@@ -26,14 +26,15 @@
         android:onClick="SignOut"
         android:shadowColor="#7E4949"
         android:text="SignOut"
+        android:textColor="#000000"
         android:textSize="18sp"
-        app:backgroundTint="#2E1010"
+        app:backgroundTint="#0AF113"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.139"
+        app:layout_constraintVertical_bias="0.129"
         app:rippleColor="#B6B3B3"
         app:strokeColor="#AE9E9E" />
 
@@ -42,8 +43,8 @@
         android:layout_width="141dp"
         android:layout_height="76dp"
         android:text="Otp Verify"
-        android:textColor="#E6DEDE"
-        app:backgroundTint="#2A0965"
+        android:textColor="#020202"
+        app:backgroundTint="#0AF113"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.059"
@@ -52,14 +53,30 @@
         app:layout_constraintVertical_bias="0.076" />
 
     <Button
+        android:id="@+id/button2"
+        android:layout_width="141dp"
+        android:layout_height="76dp"
+        android:onClick="ChooseField"
+        android:text="Doubt booking Portal"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:backgroundTint="#0AF113"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signout"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <Button
         android:id="@+id/button3"
         android:layout_width="141dp"
         android:layout_height="76dp"
         android:layout_marginTop="26dp"
         android:onClick="forgotPass"
         android:text="forgot pass"
-        android:textColor="#E6DEDE"
-        app:backgroundTint="#2A0965"
+        android:textColor="#000000"
+        app:backgroundTint="#0AF113"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.761"

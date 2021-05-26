@@ -123,7 +123,7 @@ public class RegisterPortal extends AppCompatActivity {
 
 
                             UserId = fAuth.getCurrentUser().getUid();
-                            DocumentReference documentReference = fstore.collection("USERS").document(UserId);
+                            DocumentReference documentReference = fstore.collection("USERS").document(phno);
                             Map<String,Object> user = new HashMap<>();
                             user.put("fullName",fname);
                             user.put("E-mail",email);

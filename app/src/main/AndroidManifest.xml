@@ -9,7 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewUi">
-        <activity android:name=".otpAfterRegister"></activity>
+        <activity android:name=".Mechatronics.MechatronicsSubjects"></activity>
+        <activity android:name=".Mechanical.MechanicalSubjects" />
+        <activity android:name=".ENTC.ElectronicsSubjects" />
+        <activity android:name=".ComputerScience.GermanTeachers" />
+        <activity android:name=".ComputerScience.IcttTeachers" />
+        <activity android:name=".ComputerScience.SepmTeachers" />
+        <activity android:name=".ComputerScience.TocTeachers" />
+        <activity android:name=".ComputerScience.DccnTeachers" />
+        <activity android:name=".ComputerScience.AdsaTeachers" />
+        <activity android:name=".InfoTech.InformationTechnology" />
+        <activity android:name=".AeroSpace.AeroSpace" />
+        <activity android:name=".otpAfterRegister" />
         <activity android:name=".ResetPassword" />
         <activity android:name=".changePassword" />
         <activity android:name=".ForgotPass" />
@@ -47,6 +58,20 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ChooseDomain">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SubjectChoice">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
