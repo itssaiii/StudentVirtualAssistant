@@ -14,7 +14,7 @@ import com.mitadt.newui.AeroSpace.AeroSpace;
 import com.mitadt.newui.ENTC.ElectronicsSubjects;
 import com.mitadt.newui.InfoTech.InformationTechnology;
 import com.mitadt.newui.Mechanical.MechanicalSubjects;
-import com.mitadt.newui.Mechatronics.MechatronicsSubjects;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +38,7 @@ public class ChooseDomain extends AppCompatActivity  {
         categories.add("Information Technology");
         categories.add("Electronics and Telecommunications");
         categories.add("Mechanical");
-        categories.add("Mechatronics");
+
 
 
         ArrayAdapter ad = new ArrayAdapter(this, android.R.layout.simple_spinner_item,categories);
@@ -83,11 +83,7 @@ public class ChooseDomain extends AppCompatActivity  {
                     startActivity(new Intent(getApplicationContext(), MechanicalSubjects.class));
 
                 }
-                if(sSelected.equals("Mechatronics"))
-                {
-                    startActivity(new Intent(getApplicationContext(), MechatronicsSubjects.class));
 
-                }
 
             }
 
