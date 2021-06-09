@@ -15,7 +15,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 import java.util.concurrent.TimeUnit;
 
 public class ForgotPass extends AppCompatActivity {
-
+    public String NumberEnteredByUser;
     EditText mPhoneNumber;
     Button GenerateOtp;
     FirebaseAuth fAuth;
@@ -32,10 +32,15 @@ public class ForgotPass extends AppCompatActivity {
         mPhoneNumber = findViewById(R.id.numberphone);
         GenerateOtp = findViewById(R.id.proceedBtn);
 
+
+
         GenerateOtp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String num = mPhoneNumber.getText().toString().trim();
+
+
+
 
                 if(num.isEmpty()){
                     mPhoneNumber.setError("Phone Number is required");

@@ -4,19 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_dashboard">
+    android:background="@drawable/custom_button">
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
         android:text="Student Virtual Assistant"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
         android:textSize="25dp"
         android:textStyle="bold"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:textColor="@android:color/white"
-        android:background="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,9 +30,10 @@
         android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toTopOf="@+id/textView11"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:srcCompat="@drawable/whitelogo" />
+        app:srcCompat="@drawable/logocropped" />
 
     <TextView
         android:id="@+id/textView11"
@@ -39,9 +41,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Name"
+        android:textColor="@color/black"
         android:textSize="18dp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
@@ -49,12 +51,13 @@
     <Button
         android:id="@+id/librarybutton"
         android:layout_width="300dp"
-        android:textStyle="bold"
-        android:textSize="22dp"
         android:layout_height="65dp"
-        android:text="Library Manager"
-        android:background="@drawable/custom_button"
         android:layout_marginTop="78dp"
+        android:background="@drawable/custom_button"
+        android:text="Library Manager"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:backgroundTint="#673AB7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
@@ -64,10 +67,10 @@
         android:layout_width="300dp"
         android:layout_height="65dp"
         android:layout_marginTop="30dp"
-        android:text="Study Zone"
-        android:textStyle="bold"
-        android:textSize="22dp"
         android:background="@drawable/custom_button2"
+        android:text="Study Zone"
+        android:textSize="22dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/librarybutton" />
@@ -77,10 +80,10 @@
         android:layout_width="300dp"
         android:layout_height="65dp"
         android:layout_marginTop="30dp"
-        android:text="Daily Planner"
-        android:textStyle="bold"
-        android:textSize="22dp"
         android:background="@drawable/custom_button"
+        android:text="Daily Planner"
+        android:textSize="22dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/studyzonebutton" />

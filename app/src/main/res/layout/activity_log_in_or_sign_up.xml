@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogInOrSignUp">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/canvabg"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp" />
+
+    <Button
+        android:id="@+id/redirectReg"
+        android:layout_width="192dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:background="@drawable/rounded_corner"
+        android:text="REGISTER"
+        android:textAllCaps="true"
+        android:textColor="#0000E1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#EDD606"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.98" />
+
+    <Button
+        android:id="@+id/redirectLog"
+        android:layout_width="192dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:background="@drawable/rounded_corner"
+        android:text="LOG-IN"
+        android:textColor="#0000E1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#FBE204"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.978" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="219dp"
+        android:layout_height="187dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.382"
+        app:srcCompat="@drawable/logocropped" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

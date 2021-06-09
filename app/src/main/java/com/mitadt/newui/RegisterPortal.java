@@ -39,7 +39,7 @@ public class RegisterPortal extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fstore;
     ProgressBar progressBar;
-    String UserId;
+    String UserId,phone;
 
 
 
@@ -123,6 +123,7 @@ public class RegisterPortal extends AppCompatActivity {
 
 
                             UserId = fAuth.getCurrentUser().getUid();
+                            phone = fAuth.getCurrentUser().getPhoneNumber();
                             DocumentReference documentReference = fstore.collection("USERS").document(phno);
                             Map<String,Object> user = new HashMap<>();
                             user.put("fullName",fname);
@@ -159,8 +160,9 @@ public class RegisterPortal extends AppCompatActivity {
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), login_design.class));
-                finish();
+                Intent intent = new Intent(getApplicationContext(),login_design.class);
+                intent.putExtra("CorrectNo",phone);
+                startActivity(intent);
             }
         });
 
