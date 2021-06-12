@@ -13,7 +13,7 @@
 
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/canvabg"
-        tools:layout_editor_absoluteX="-96dp"
+        tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
 
     <ImageView
@@ -28,8 +28,10 @@
         app:layout_constraintVertical_bias="0.026"
         app:srcCompat="@drawable/logocropped" />
 
+
+
     <EditText
-        android:id="@+id/logEmail"
+        android:id="@+id/adminEmail"
         android:layout_width="330dp"
         android:layout_height="47dp"
         android:background="@drawable/rounded_corner"
@@ -50,7 +52,7 @@
         app:layout_constraintVertical_bias="0.177" />
 
     <EditText
-        android:id="@+id/logPassword"
+        android:id="@+id/AdminPass"
         android:layout_width="330dp"
         android:layout_height="47dp"
         android:background="@drawable/rounded_corner"
@@ -69,7 +71,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logEmail"
+        app:layout_constraintTop_toBottomOf="@+id/adminEmail"
         app:layout_constraintVertical_bias="0.05" />
 
     <TextView
@@ -95,7 +97,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logPassword"
+        app:layout_constraintTop_toBottomOf="@+id/AdminPass"
         app:layout_constraintVertical_bias="0.195" />
 
     <TextView
@@ -104,11 +106,9 @@
         android:layout_height="wrap_content"
         android:text="Don't have an account? Register"
         android:textColor="#FFEB3B"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SignInBtn"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintTop_toBottomOf="@+id/SignInBtn" />
 
     <ProgressBar
         android:id="@+id/progressBar2"
@@ -116,12 +116,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegOptionText"
-        app:layout_constraintVertical_bias="0.256" />
+        app:layout_constraintTop_toBottomOf="@+id/RegOptionText" />
 
     <TextView
         android:id="@+id/clickForgotPass"
@@ -132,7 +130,7 @@
         app:layout_constraintBottom_toTopOf="@+id/SignInBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logPassword"
+        app:layout_constraintTop_toBottomOf="@+id/AdminPass"
         app:layout_constraintVertical_bias="0.295" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

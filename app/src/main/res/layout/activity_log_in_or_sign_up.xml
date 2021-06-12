@@ -16,39 +16,54 @@
         tools:layout_editor_absoluteY="-1dp" />
 
     <Button
-        android:id="@+id/redirectReg"
-        android:layout_width="192dp"
-        android:layout_height="72dp"
+        android:id="@+id/redirectFaculty"
+        android:layout_width="295dp"
+        android:layout_height="54dp"
         android:background="@drawable/rounded_corner"
-        android:text="REGISTER"
+        android:text="Faculty Login"
         android:textAllCaps="true"
         android:textColor="#0000E1"
         android:textSize="18sp"
         android:textStyle="bold"
         app:backgroundTint="#EDD606"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.98" />
+        app:layout_constraintTop_toBottomOf="@+id/universityLogin"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <Button
+        android:id="@+id/universityLogin"
+        android:layout_width="295dp"
+        android:layout_height="54dp"
+        android:background="@drawable/rounded_corner"
+        android:text="University Login"
+        android:textAllCaps="true"
+        android:textColor="#0000E1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#EDD606"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.099" />
 
     <Button
         android:id="@+id/redirectLog"
-        android:layout_width="192dp"
-        android:layout_height="72dp"
+        android:layout_width="295dp"
+        android:layout_height="54dp"
         android:background="@drawable/rounded_corner"
-        android:text="LOG-IN"
+        android:text="Student Login"
         android:textColor="#0000E1"
         android:textSize="18sp"
         android:textStyle="bold"
         app:backgroundTint="#FBE204"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.978" />
+        app:layout_constraintTop_toBottomOf="@+id/redirectFaculty"
+        app:layout_constraintVertical_bias="0.071" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -56,10 +71,9 @@
         android:layout_height="187dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.382"
+        app:layout_constraintVertical_bias="0.104"
         app:srcCompat="@drawable/logocropped" />
 
 

@@ -32,8 +32,8 @@ public class login_design extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_design);
 
-        mEmailId = findViewById(R.id.logEmail);
-        mPassword = findViewById(R.id.logPassword);
+        mEmailId = findViewById(R.id.adminEmail);
+        mPassword = findViewById(R.id.AdminPass);
         LogInBtn = findViewById(R.id.SignInBtn);
         fAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar2);

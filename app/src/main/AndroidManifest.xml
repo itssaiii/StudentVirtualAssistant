@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewUi">
+        <activity android:name=".Admin.FacultyRegistration"></activity>
+        <activity android:name=".Admin.AdminDashboard" />
+        <activity android:name=".Admin.UniversityPortal" />
+        <activity android:name=".FacultyApp.FacultyLogin" />
         <activity android:name=".LogInOrSignUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
