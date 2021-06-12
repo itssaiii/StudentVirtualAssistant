@@ -21,53 +21,24 @@
 
     <Button
         android:id="@+id/signout"
-        android:layout_width="182dp"
-        android:layout_height="136dp"
+        android:layout_width="270dp"
+        android:layout_height="70dp"
         android:background="@drawable/button_round"
         android:onClick="SignOut"
         android:shadowColor="#7E4949"
         android:text="SignOut"
         android:textColor="#000000"
         android:textSize="18sp"
+        android:textStyle="bold|italic"
         app:backgroundTint="#B1B8B1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.154"
+        app:layout_constraintVertical_bias="0.15"
         app:rippleColor="#B6B3B3"
         app:strokeColor="#AE9E9E" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="172dp"
-        android:layout_height="134dp"
-        android:background="@drawable/button_round"
-        android:text="Otp Verify"
-        android:textColor="#020202"
-        app:backgroundTint="#BEC1BF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signout"
-        app:layout_constraintVertical_bias="0.031" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="172dp"
-        android:layout_height="134dp"
-        android:background="@drawable/button_round"
-        android:text="Otp Verify"
-        android:textColor="#020202"
-        app:backgroundTint="#BEC1BF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signout"
-        app:layout_constraintVertical_bias="0.031" />
 
     <Button
         android:id="@+id/button2"
@@ -81,25 +52,26 @@
         app:backgroundTint="#BEC1BF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signout"
-        app:layout_constraintVertical_bias="0.543" />
+        app:layout_constraintVertical_bias="0.212" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="172dp"
         android:layout_height="136dp"
         android:layout_marginTop="26dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="@drawable/button_round"
         android:onClick="forgotPass"
         android:text="forgot pass"
         android:textColor="#000000"
+        android:textStyle="bold"
         app:backgroundTint="#BEC1BF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/button"
         app:layout_constraintTop_toBottomOf="@+id/signout"
-        app:layout_constraintVertical_bias="0.501" />
+        app:layout_constraintVertical_bias="0.146" />
 </androidx.constraintlayout.widget.ConstraintLayout>

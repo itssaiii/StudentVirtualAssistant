@@ -23,7 +23,7 @@ public class login_design extends AppCompatActivity {
     EditText mEmailId, mPassword;
     FirebaseAuth fAuth;
     Button LogInBtn;
-    TextView GotoReg;
+    TextView GotoReg,ForgotPass;
     ProgressBar progressBar;
 
 
@@ -38,6 +38,7 @@ public class login_design extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar2);
         GotoReg = findViewById(R.id.RegOptionText);
+        ForgotPass = findViewById(R.id.clickForgotPass);
 
         if(fAuth.getCurrentUser()!=null)
         {
@@ -90,6 +91,13 @@ public class login_design extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),RegisterPortal.class));
                 finish();
+            }
+        });
+
+        ForgotPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), com.mitadt.newui.ForgotPass.class));
             }
         });
 

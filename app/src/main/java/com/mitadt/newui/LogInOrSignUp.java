@@ -41,7 +41,6 @@ public class LogInOrSignUp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),login_design.class));
-
             }
         });
 
