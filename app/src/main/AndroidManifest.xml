@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewUi">
-        <activity android:name=".Admin.FacultyRegistration"></activity>
+        <activity android:name=".FacultyApp.FacultyDashboard"></activity>
+        <activity android:name=".StudentTwoFactorAuthentication" />
+        <activity android:name=".FacultyTwoFactorAuthentication" />
+        <activity android:name=".TwoFactorAuthentication" />
+        <activity android:name=".Admin.FacultyRegistration" />
         <activity android:name=".Admin.AdminDashboard" />
         <activity android:name=".Admin.UniversityPortal" />
         <activity android:name=".FacultyApp.FacultyLogin" />

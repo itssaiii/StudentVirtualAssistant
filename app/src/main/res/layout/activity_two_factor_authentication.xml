@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFD6D6"
+    tools:context=".TwoFactorAuthentication">
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
+        android:text="ENTER THE SECURITY CODE"
+        android:textColor="#02157E"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView20"
+        app:layout_constraintVertical_bias="0.08"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/SecurityCodeAdmin"
+        android:layout_width="347dp"
+        android:layout_height="59dp"
+        android:background="@drawable/border"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Security Code"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:textColorHint="#454242"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:layout_constraintVertical_bias="0.149" />
+
+    <Button
+        android:id="@+id/VerifyCodeAdmin"
+        android:layout_width="162dp"
+        android:layout_height="43dp"
+        android:background="@drawable/button_round"
+        android:text="verify"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:backgroundTint="#05FF0F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SecurityCodeAdmin"
+        app:layout_constraintVertical_bias="0.127" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="126dp"
+        android:layout_height="131dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/adminlogocircle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

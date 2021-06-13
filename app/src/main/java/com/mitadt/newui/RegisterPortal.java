@@ -51,11 +51,11 @@ public class RegisterPortal extends AppCompatActivity {
 
 
         //Getting the entered information into the declared variables
-        mFullName = findViewById(R.id.fullName);
-        mEmailId = findViewById(R.id.editTextEmail);
-        mPassword = findViewById(R.id.EditTextPass);
+        mFullName = findViewById(R.id.StudentfullName);
+        mEmailId = findViewById(R.id.StudentEmail);
+        mPassword = findViewById(R.id.StudentPass);
         mRegisterBtn = findViewById(R.id.registerButton);
-        mPhoneNumber = findViewById(R.id.PhoneNumber);
+        mPhoneNumber = findViewById(R.id.StudentPhoneNumber);
 
         mLoginBtn =  findViewById(R.id.optionText);
 

@@ -40,10 +40,9 @@ public class UniversityPortal extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBarUniv);
         fAuth = FirebaseAuth.getInstance();
 
-
         if(fAuth.getCurrentUser()!=null)
         {
-            startActivity(new Intent(getApplicationContext(), AdminDashboard.class));
+            startActivity(new Intent(getApplicationContext(),AdminDashboard.class));
             finish();
         }
 

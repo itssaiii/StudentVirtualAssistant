@@ -12,4 +12,147 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/canvabg"
         android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="171dp"
+        android:layout_height="147dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056"
+        app:srcCompat="@drawable/facultylogocircle" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Faculty Registration"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView17"
+        app:layout_constraintVertical_bias="0.061" />
+
+    <EditText
+        android:id="@+id/FacultyfullName"
+        android:layout_width="330dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/rounded_corner"
+        android:drawableLeft="@drawable/personsmallicon"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Full Name"
+
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:shadowColor="#F6EBEB"
+        android:textColorHint="#807373"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <EditText
+        android:id="@+id/FacultyEmail"
+        android:layout_width="330dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="2dp"
+
+        android:background="@drawable/rounded_corner"
+        android:drawableLeft="@drawable/emailicon"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        android:shadowColor="#F6EBEB"
+        android:textColorHint="#635C5C"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FacultyfullName"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <EditText
+        android:id="@+id/FacultyPhoneNumber"
+        android:layout_width="330dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="2dp"
+
+        android:background="@drawable/rounded_corner"
+        android:drawableLeft="@drawable/phoneicon"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:paddingLeft="10dp"
+        android:shadowColor="#F6EBEB"
+        android:textColorHint="#635C5C"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FacultyEmail"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <EditText
+        android:id="@+id/FacultyPass"
+        android:layout_width="330dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/rounded_corner"
+        android:drawableLeft="@drawable/passicon"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:shadowColor="#F6EBEB"
+        android:textColorHint="#756A6A"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FacultyPhoneNumber"
+        app:layout_constraintVertical_bias="0.033" />
+
+    <Button
+        android:id="@+id/FacultyReg"
+        android:layout_width="149dp"
+        android:layout_height="53dp"
+        android:background="@drawable/rounded_corner"
+        android:text="Register"
+        app:backgroundTint="#FB0303"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FacultyPass"
+        app:layout_constraintVertical_bias="0.196" />
+
+    <ProgressBar
+        android:id="@+id/facultyprogressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FacultyReg"
+        android:visibility="invisible"
+        app:layout_constraintVertical_bias="0.319" />
 </androidx.constraintlayout.widget.ConstraintLayout>

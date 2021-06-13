@@ -24,10 +24,7 @@ public class LogInOrSignUp extends AppCompatActivity {
 
         fAuth = FirebaseAuth.getInstance();
 
-        if(fAuth.getCurrentUser() != null){  // IF USER HAS ALREADY LOGGED IN TO THE SYSTEM
-            startActivity(new Intent(getApplicationContext(),MainPage.class));
-            finish();
-        }
+
 
         RedirectToLogIn = findViewById(R.id.redirectLog);
         RedirectToFaculty = findViewById(R.id.redirectFaculty);
@@ -36,14 +33,15 @@ public class LogInOrSignUp extends AppCompatActivity {
         UniversityLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), UniversityPortal.class));
+                startActivity(new Intent(getApplicationContext(), TwoFactorAuthentication.class));
+
             }
         });
 
         RedirectToFaculty.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), FacultyLogin.class));
+                startActivity(new Intent(getApplicationContext(), FacultyTwoFactorAuthentication.class));
 
             }
         });
@@ -51,7 +49,7 @@ public class LogInOrSignUp extends AppCompatActivity {
         RedirectToLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),login_design.class));
+                startActivity(new Intent(getApplicationContext(),StudentTwoFactorAuthentication.class));
             }
         });
 
