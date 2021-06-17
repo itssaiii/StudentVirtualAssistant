@@ -22,4 +22,7 @@
         <item>Mechatronics</item>
     </string-array>
 
+    <string name="navigation_drawer_open">Open SideBar</string>
+    <string name="navigation_drawer_close">Close SideBar</string>
+
 </resources>

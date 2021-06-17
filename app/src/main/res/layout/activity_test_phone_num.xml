@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ForgotPass"
+    android:background="#DFD8D8">
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="190dp"
+        android:layout_height="144dp"
+        android:foregroundGravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051"
+        app:srcCompat="@drawable/forgotpassicon" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:text="TEST RESET PASSWORD"
+        android:textAllCaps="true"
+        android:textColor="#0E0E0E"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="387dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Enter your Phone Number to retrieve your account"
+        android:textColor="#595555"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/numberphone"
+        android:layout_width="357dp"
+        android:layout_height="51dp"
+        android:background="@drawable/border"
+        android:drawableLeft="@drawable/phoneicon"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Phone-Number"
+        android:inputType="textEmailAddress|phone"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.113" />
+
+    <Button
+        android:id="@+id/proceedBtn"
+        android:layout_width="179dp"
+        android:layout_height="45dp"
+        android:background="@drawable/button_round"
+        android:text="next"
+        android:textAllCaps="true"
+        android:textColor="#0B0909"
+        android:textStyle="bold|italic"
+        app:backgroundTint="#F3DA06"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberphone"
+        app:layout_constraintVertical_bias="0.095" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#DAD4D6"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proceedBtn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

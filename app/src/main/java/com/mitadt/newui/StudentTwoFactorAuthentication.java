@@ -27,10 +27,6 @@ public class StudentTwoFactorAuthentication extends AppCompatActivity {
         Verify = findViewById(R.id.StudentVerifyCode);
         fAuth = FirebaseAuth.getInstance();
 
-        if(fAuth.getCurrentUser() != null){  // IF USER HAS ALREADY LOGGED IN TO THE SYSTEM
-            startActivity(new Intent(getApplicationContext(),MainPage.class));
-            finish();
-        }
 
         Verify.setOnClickListener(new View.OnClickListener() {
             @Override

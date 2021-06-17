@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFD8D8"
+    tools:context=".OtpActivity.testOtpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp"
+        tools:ignore="MissingClass">
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/closeicon"
+            android:background="@drawable/border" />
+
+
+
+        <TextView
+            android:id="@+id/otptext"
+            android:layout_width="193dp"
+            android:layout_height="166dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/bangers"
+            android:text="TEST OTP"
+            android:textColor="#F10909"
+            android:textSize="100dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/aclonica"
+            android:text="Verification"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="Enter the One Time Password sent to your Phone-Number"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.chaos.view.PinView
+            android:id="@+id/EnterCode"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:background="#C6BFBF"
+            android:cursorVisible="true"
+            android:inputType="number"
+            app:cursorColor="@color/black"
+            app:hideLineWhenFilled="true"
+            app:itemCount="6"
+            app:itemRadius="5dp"
+            app:lineColor="#1E06FD" />
+
+
+
+        <Button
+            android:id="@+id/btnVerify"
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_round"
+            android:text="Submit"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold|italic"
+            app:backgroundTint="#D8D410" />
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -33,6 +33,7 @@ public class UniversityPortal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_university_portal);
+        getSupportActionBar().hide();
 
         UnivEmail = findViewById(R.id.adminEmail);
         UnivPass = findViewById(R.id.AdminPass);

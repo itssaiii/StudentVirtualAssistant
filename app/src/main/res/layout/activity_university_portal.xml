@@ -24,7 +24,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView12"
         app:layout_constraintVertical_bias="0.069"
-        app:srcCompat="@drawable/adminlogocircle" />
+        app:srcCompat="@drawable/univlogocircle" />
 
     <TextView
         android:id="@+id/textView14"
@@ -89,9 +89,11 @@
         android:id="@+id/AdminLogIn"
         android:layout_width="154dp"
         android:layout_height="53dp"
+        android:background="@drawable/rounded_corner"
         android:text="Sign-In"
         android:textAllCaps="true"
         android:textSize="18sp"
+        app:backgroundTint="#FF0000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

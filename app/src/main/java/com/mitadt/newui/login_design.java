@@ -97,7 +97,7 @@ public class login_design extends AppCompatActivity {
         ForgotPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), com.mitadt.newui.ForgotPass.class));
+                startActivity(new Intent(getApplicationContext(), ForgotPass.class));
             }
         });
 

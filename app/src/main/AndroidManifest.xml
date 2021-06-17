@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewUi">
-        <activity android:name=".FacultyApp.FacultyDashboard"></activity>
+        <activity android:name=".OtpActivity.testOtpActivity"></activity>
+        <activity android:name=".OtpActivity.testPhoneNum" />
+        <activity android:name=".FacultyApp.FacultyDashboard" />
         <activity android:name=".StudentTwoFactorAuthentication" />
         <activity android:name=".FacultyTwoFactorAuthentication" />
         <activity android:name=".TwoFactorAuthentication" />
@@ -18,11 +20,6 @@
         <activity android:name=".Admin.UniversityPortal" />
         <activity android:name=".FacultyApp.FacultyLogin" />
         <activity android:name=".LogInOrSignUp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Mechatronics.MechatronicsSubjects" />
         <activity android:name=".Mechanical.MechanicalSubjects" />
@@ -44,19 +41,11 @@
             android:name=".login"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.NewUi.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Register" />
         <activity android:name=".RegisterPortal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".login_design"
@@ -80,18 +69,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".ChooseDomain">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".SubjectChoice">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data
