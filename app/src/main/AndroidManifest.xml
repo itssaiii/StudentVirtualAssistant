@@ -9,7 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewUi">
-        <activity android:name=".OtpActivity.testOtpActivity"></activity>
+        <activity android:name=".ComputerScience.JoinAdsaLecture"
+            android:label="Join ADSA Lecture"
+            android:colorMode="hdr"></activity>
+        <activity android:name=".ComputerScience.ScheduleMeetingAdsa" />
+        <activity android:name=".ComputerScience.DccnBooks" />
+        <activity android:name=".ComputerScience.Adsa_Books" />
+        <activity
+            android:name=".SelectOptionsRevision"
+            android:label="Choose Portal" />
+        <activity android:name=".RateApp" />
+        <activity android:name=".FacultyProfile" />
+        <activity android:name=".StudentProfile" />
+        <activity android:name=".OtpActivity.testOtpActivity" />
         <activity android:name=".OtpActivity.testPhoneNum" />
         <activity android:name=".FacultyApp.FacultyDashboard" />
         <activity android:name=".StudentTwoFactorAuthentication" />
@@ -19,8 +31,7 @@
         <activity android:name=".Admin.AdminDashboard" />
         <activity android:name=".Admin.UniversityPortal" />
         <activity android:name=".FacultyApp.FacultyLogin" />
-        <activity android:name=".LogInOrSignUp">
-        </activity>
+        <activity android:name=".LogInOrSignUp" />
         <activity android:name=".Mechatronics.MechatronicsSubjects" />
         <activity android:name=".Mechanical.MechanicalSubjects" />
         <activity android:name=".ENTC.ElectronicsSubjects" />
@@ -40,13 +51,9 @@
         <activity
             android:name=".login"
             android:label="@string/title_activity_login"
-            android:theme="@style/Theme.NewUi.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.NewUi.NoActionBar" />
         <activity android:name=".Register" />
-        <activity android:name=".RegisterPortal">
-
-        </activity>
+        <activity android:name=".RegisterPortal" />
         <activity
             android:name=".login_design"
             android:label="@string/title_activity_login_design"
@@ -68,12 +75,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChooseDomain">
-
-        </activity>
-        <activity android:name=".SubjectChoice">
-
-        </activity>
+        <activity android:name=".ChooseDomain" />
+        <activity android:name=".SubjectChoice" />
 
         <meta-data
             android:name="preloaded_fonts"

@@ -10,11 +10,11 @@
     <item
         android:id="@+id/attendance"
         android:icon="@drawable/ic_attendance_icon"
-        android:title="Attendance"/>
+        android:title="Lectures"/>
 
     <item
         android:id="@+id/doubt"
         android:icon="@drawable/ic_doubtbook_icon"
-        android:title="Doubt"/>
+        android:title="Books"/>
 
 </menu>

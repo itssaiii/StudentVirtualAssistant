@@ -13,6 +13,8 @@ import com.mitadt.newui.ComputerScience.GermanTeachers;
 import com.mitadt.newui.ComputerScience.IcttTeachers;
 import com.mitadt.newui.ComputerScience.SepmTeachers;
 import com.mitadt.newui.ComputerScience.TocTeachers;
+import com.mitadt.newui.R;
+import com.mitadt.newui.SelectOptionsRevision;
 
 public class SubjectChoice extends AppCompatActivity implements View.OnClickListener {
 
@@ -45,12 +47,12 @@ public class SubjectChoice extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
 
         switch (v.getId()){
-            case R.id.adsa: startActivity(new Intent(getApplicationContext(), AdsaTeachers.class));break;
-            case R.id.dccn: startActivity(new Intent(getApplicationContext(), DccnTeachers.class)); break;
-            case R.id.toc: startActivity(new Intent(getApplicationContext(), TocTeachers.class)); break;
-            case R.id.sepm: startActivity(new Intent(getApplicationContext(), SepmTeachers.class)); break;
-            case R.id.ictt: startActivity(new Intent(getApplicationContext(), IcttTeachers.class)); break;
-            case R.id.german: startActivity(new Intent(getApplicationContext(), GermanTeachers.class)); break;
+            case R.id.adsa: startActivity(new Intent(getApplicationContext(), SelectOptionsRevision.class));break;
+            case R.id.dccn: startActivity(new Intent(getApplicationContext(), SelectOptionsRevision.class)); break;
+            case R.id.toc: startActivity(new Intent(getApplicationContext(), SelectOptionsRevision.class)); break;
+            case R.id.sepm: startActivity(new Intent(getApplicationContext(), SelectOptionsRevision.class)); break;
+            case R.id.ictt: startActivity(new Intent(getApplicationContext(), SelectOptionsRevision.class)); break;
+            case R.id.german: startActivity(new Intent(getApplicationContext(), SelectOptionsRevision.class)); break;
 
             default:break;
 

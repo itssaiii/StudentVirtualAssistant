@@ -18,5 +18,5 @@
     <item
         android:id="@+id/doubt"
         android:icon="@drawable/ic_doubtbook_icon"
-        android:title="Doubt"/>
+        android:title="Revision"/>
 </menu>

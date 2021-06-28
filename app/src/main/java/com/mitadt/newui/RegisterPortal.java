@@ -80,6 +80,10 @@ public class RegisterPortal extends AppCompatActivity {
                     mFullName.setError(("Full Name is required"));
                     return;
                 }
+                if (!isEmailValid(email)){
+                    mEmailId.setError("Invalid Address");
+                    return;
+                }
 
                 if(TextUtils.isEmpty(email)){ //checking whether the email text is empty or not
                     mEmailId.setError("E-mail Id is required");
@@ -119,6 +123,7 @@ public class RegisterPortal extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
+
                             Toast.makeText(RegisterPortal.this, "Registered Succesfully", Toast.LENGTH_SHORT).show();
 
 
@@ -144,9 +149,15 @@ public class RegisterPortal extends AppCompatActivity {
                                 }
                             });
 
-
-                            startActivity(new Intent(getApplicationContext(),MainPage.class));
+                            Intent intent = new Intent(getApplicationContext(),MainPage.class);
+                            intent.putExtra("PhoneNo",phno);
+                            intent.putExtra("FullName",fname);
+                            intent.putExtra("Email",email);
+                            intent.putExtra("Password",password);
+                            startActivity(intent);
                             finish();
+
+
 
                         }
                         else {
@@ -166,5 +177,8 @@ public class RegisterPortal extends AppCompatActivity {
             }
         });
 
+    }
+    boolean isEmailValid(CharSequence email) {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 }

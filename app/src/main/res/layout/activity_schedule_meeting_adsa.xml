@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ComputerScience.ScheduleMeetingAdsa">
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="321dp"
+        android:layout_height="73dp"
+        android:gravity="center"
+        android:text="Schedule Lecture"
+        android:textColor="#FF0000"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="321dp"
+        android:layout_height="73dp"
+        android:gravity="center"
+        android:text="adsa"
+        android:textAllCaps="true"
+        android:textColor="#FF0000"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="349dp"
+        android:layout_height="63dp"
+        android:focusable="false"
+        android:inputType="none"
+        android:text="Choose Date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <EditText
+        android:id="@+id/time"
+        android:layout_width="349dp"
+        android:layout_height="63dp"
+        android:focusable="false"
+        android:inputType="none"
+        android:text="Choose Time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <EditText
+        android:id="@+id/meetinglink"
+        android:layout_width="349dp"
+        android:layout_height="63dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:hint="Enter the Meeting Link"
+        android:inputType="none"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topic"
+        app:layout_constraintVertical_bias="0.219" />
+
+    <EditText
+        android:id="@+id/topic"
+        android:layout_width="349dp"
+        android:layout_height="63dp"
+
+        android:hint="Topic of Discussion"
+        android:inputType="textMultiLine"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <Button
+        android:id="@+id/scheduleButton"
+        android:layout_width="175dp"
+        android:layout_height="51dp"
+        android:background="#FFFFFF"
+        android:text="Schedule"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#FF0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meetinglink"
+        app:layout_constraintVertical_bias="0.315" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

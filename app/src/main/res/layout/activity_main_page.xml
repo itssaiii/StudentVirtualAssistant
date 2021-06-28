@@ -1,112 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/student_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainPage">
+    android:background="#DFD8D8"
 
-    <Button
-        android:id="@+id/signout"
-        android:layout_width="338dp"
-        android:layout_height="71dp"
-        android:background="@drawable/button_round"
-        android:onClick="SignOut"
-        android:shadowColor="#7E4949"
-        android:text="SignOut"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textStyle="bold|italic"
-        app:backgroundTint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.226"
-        app:rippleColor="#B6B3B3"
-        app:strokeColor="#AE9E9E" />
+    tools:context=".MainPage"
+    tools:openDrawer="start">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="328dp"
-        android:layout_height="70dp"
-        android:background="@drawable/button_round"
-        android:onClick="ChooseField"
-        android:text="Doubt booking Portal"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:backgroundTint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signout"
-        app:layout_constraintVertical_bias="0.068" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="330dp"
-        android:layout_height="63dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:background="@drawable/button_round"
-        android:onClick="forgotPass"
-        android:text="forgot pass"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:backgroundTint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.076" />
-
-    <Button
-        android:id="@+id/virtualass"
-        android:layout_width="330dp"
-        android:layout_height="63dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
-        android:background="@drawable/button_round"
-        android:onClick="forgotPass"
-        android:text="Assistant"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:backgroundTint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.508" />
-
-    <Button
-        android:id="@+id/virtuallibrary"
-        android:layout_width="330dp"
-        android:layout_height="63dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:background="@drawable/button_round"
-        android:onClick="forgotPass"
-        android:text="LIBRARY"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:backgroundTint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.28" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#FB1100"
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/student_sidebar_view"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        app:menu="@menu/main_menu"
+        app:headerLayout="@layout/student_header"
         app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        app:labelVisibilityMode="labeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_navigation_menu">
+        android:background="@color/white"
+        tools:ignore="MissingConstraints"
+        android:layout_gravity="start|left">
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </com.google.android.material.navigation.NavigationView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="0dp">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/studentToolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="#DFD8D8"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:navigationIcon="@drawable/ic_sidebar_menu_icon" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/VirtualLibrary"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="#DFD8D8"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="12dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.571"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/revisionCardView"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="20dp"
+                android:background="#DFD8D8"
+                android:src="@drawable/ic_library_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="17dp"
+                android:fontFamily="@font/aclonica"
+                android:text="Virtual Library"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/revisionCardView"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/border"
+            app:cardBackgroundColor="#DFD8D8"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="12dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.209">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="20dp"
+                android:background="#DFD8D8"
+                android:src="@drawable/ic_doubtbook_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="17dp"
+                android:fontFamily="@font/aclonica"
+                android:text="Revision Portal"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/DailyPlanner"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="#DFD8D8"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="12dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/VirtualLibrary"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="20dp"
+                android:background="#DFD8D8"
+                android:src="@drawable/ic_planner_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="17dp"
+                android:fontFamily="@font/aclonica"
+                android:text="DAILY PLANNER"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/TeacherSignout"
+            android:layout_width="244dp"
+            android:layout_height="52dp"
+            android:background="@drawable/button_round"
+            android:text="SIGN-OUT"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="#DFD8D8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.107" />
+
+        <Button
+            android:id="@+id/StudentSignout"
+            android:layout_width="244dp"
+            android:layout_height="52dp"
+            android:background="@drawable/button_round"
+            android:text="SIGN-OUT"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="#DFD8D8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.107" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#FF1100"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/bottom_navigation_menu">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.content.DialogInterface;
 import android.widget.Button;
+import android.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.mitadt.newui.FacultyApp.FacultyLogin;
@@ -30,8 +31,13 @@ public class AdminDashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_dashboard);
         getSupportActionBar().hide();
+
         RegisterFaculty = findViewById(R.id.facultyreg);
         logout = findViewById(R.id.signoutAdmin);
+
+        //navigation drawer
+
+
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -6,9 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +23,8 @@ import android.icu.util.MeasureUnit;
 
 import com.chaos.view.PinView;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskExecutors;
 import com.google.firebase.FirebaseException;
@@ -27,17 +33,19 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class otpAfterRegister extends AppCompatActivity {
 
-    public String NumberEnteredByUser,verificationCodeBySystem;
+    public String NumberEnteredByUser, verificationCodeBySystem, FullName, Email, Pass;
+    public static final String TAG = "TAG";
     Button VerifyButton;
     PinView phoneEnteredByUser;
-    FirebaseAuth auth;
+    FirebaseAuth fauth;
+    FirebaseFirestore fstore;
     PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallback;
-
-
-
+    String UserId;
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -47,67 +55,25 @@ public class otpAfterRegister extends AppCompatActivity {
         setContentView(R.layout.activity_verify_otp);
         getSupportActionBar().hide();
 
-        Intent intent =getIntent();
-        NumberEnteredByUser = intent.getStringExtra("phoneNo");
-
+        Intent intent = getIntent();
+        NumberEnteredByUser = intent.getStringExtra("PhoneNo");
+        FullName = intent.getStringExtra("FullName");
+        Email = intent.getStringExtra("Email");
+        Pass = intent.getStringExtra("Password");
 
 
         VerifyButton = findViewById(R.id.otpAfterRegBtn);
         phoneEnteredByUser = findViewById(R.id.EnterCodeForRegister);
-        auth = FirebaseAuth.getInstance();
+        fauth = FirebaseAuth.getInstance();
+        fstore = FirebaseFirestore.getInstance();
 
-
-        send_code_to_user(NumberEnteredByUser);
-
-
-
-
-        VerifyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                checkcode();
-            }
-        });
 
     }
 
 
-    private void checkcode() {
-        String userEnteredOtp = phoneEnteredByUser.getText().toString();
-        if(userEnteredOtp.isEmpty() || userEnteredOtp.length()<6){
-            Toast.makeText(this, "Wrong Otp!", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        finishEverything(userEnteredOtp);
-    }
-
-    private void finishEverything(String code) {
-        phoneEnteredByUser.setText(code);
-        PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationCodeBySystem,code);
-        sign_in(credential);
-    }
-
-    private void sign_in(PhoneAuthCredential credential) {
-        FirebaseAuth auth = FirebaseAuth.getInstance();
-        auth.signInWithCredential(credential).addOnCompleteListener(otpAfterRegister.this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful())
-                {
-                    Toast.makeText(otpAfterRegister.this, "UserSignedInSuccessfully", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(),MainPage.class));
-                }
-                else {
-                    Toast.makeText(otpAfterRegister.this,task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-    }
-
-    private void send_code_to_user(String NumberEnteredByUser ) {
+    private void send_code_to_user(String NumberEnteredByUser) {
         PhoneAuthOptions options =
-                PhoneAuthOptions.newBuilder(auth)
+                PhoneAuthOptions.newBuilder(fauth)
                         .setPhoneNumber("+91" + NumberEnteredByUser)       // Phone number to verify
                         .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
                         .setActivity(this)                 // Activity (for callback binding)
@@ -140,4 +106,72 @@ public class otpAfterRegister extends AppCompatActivity {
         PhoneAuthProvider.verifyPhoneNumber(options);
 
     }
+
+    private void checkcode() {
+        String userEnteredOtp = phoneEnteredByUser.getText().toString();
+        if (userEnteredOtp.isEmpty() || userEnteredOtp.length() < 6) {
+            Toast.makeText(this, "Wrong Otp!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        finishEverything(userEnteredOtp);
+    }
+
+    private void finishEverything(String code) {
+        phoneEnteredByUser.setText(code);
+        PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationCodeBySystem, code);
+        sign_in(credential);
+    }
+
+    private void sign_in(PhoneAuthCredential credential) {
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        auth.signInWithCredential(credential).addOnCompleteListener(otpAfterRegister.this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    fauth.createUserWithEmailAndPassword(Email, Pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+
+                                UserId = auth.getCurrentUser().getUid();
+
+                                DocumentReference documentReference = fstore.collection("USERS").document(NumberEnteredByUser);
+                                Map<String, Object> user = new HashMap<>();
+                                user.put("fullName", FullName);
+                                user.put("E-mail", Email);
+                                user.put("Phone-No", NumberEnteredByUser);
+                                user.put("Password", Pass);
+
+                                documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+                                        Log.d(TAG, "On success: User profile is created for " + UserId);
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Log.d(TAG, "On failure " + e.toString());
+
+                                    }
+                                });
+                                Toast.makeText(otpAfterRegister.this, "UserRegisteredSuccessfully", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(), MainPage.class));
+                                finish();
+                            } else {
+                                Toast.makeText(otpAfterRegister.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                }
+            }
+
+        });
+    }
 }
+
+
+
+
+
+
+

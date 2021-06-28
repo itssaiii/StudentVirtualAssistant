@@ -8,14 +8,15 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="282dp"
-        android:layout_height="130dp"
+        android:layout_width="193dp"
+        android:layout_height="181dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.076"
-        app:srcCompat="@drawable/doubticon" />
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/choosedomainicon" />
 
     <TextView
         android:id="@+id/textView7"

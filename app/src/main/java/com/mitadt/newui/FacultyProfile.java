@@ -4,12 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class ResetPassword extends AppCompatActivity {
+public class FacultyProfile extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reset_password);
-        getSupportActionBar().hide();
+        setContentView(R.layout.activity_faculty_profile);
     }
 }

@@ -42,6 +42,7 @@ public class ForgotPass extends AppCompatActivity {
 
 
 
+
                 if(num.isEmpty()){
                     mPhoneNumber.setError("Phone Number is required");
                     return;
@@ -59,6 +60,8 @@ public class ForgotPass extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),VerifyOtp.class);
                 intent.putExtra("phoneNo",num);
                 startActivity(intent);
+
+
 
 
             }

@@ -20,6 +20,8 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.mitadt.newui.ComputerScience.ScheduleMeetingAdsa;
+import com.mitadt.newui.FacultyProfile;
 import com.mitadt.newui.LogInOrSignUp;
 import com.mitadt.newui.R;
 
@@ -28,7 +30,7 @@ public class FacultyDashboard extends AppCompatActivity implements View.OnClickL
     private AlertDialog mAlertDialog;
     private AlertDialog.Builder builder;
 
-    CardView revision,prof,attendance;
+    CardView revision,prof,books;
     DrawerLayout drawerLayout;
     NavigationView sidebar;
     Toolbar toolbar;
@@ -96,9 +98,11 @@ public class FacultyDashboard extends AppCompatActivity implements View.OnClickL
         switch (item.getItemId()){
             case R.id.profile:
                 Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), FacultyProfile.class));
                 break;
             case R.id.settings:
                 Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), ScheduleMeetingAdsa.class));
                 break;
 
             case R.id.logout:
@@ -129,12 +133,14 @@ public class FacultyDashboard extends AppCompatActivity implements View.OnClickL
         switch (v.getId()){
             case R.id.revisionCardView:
                 Toast.makeText(this, "Revision Portal", Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.ProfileCardView:
                 Toast.makeText(this, "Profile Page", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.AttendanceCardView:
                 Toast.makeText(this, "Attendance Portal", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), ScheduleMeetingAdsa.class));
                 break;
 
             default:break;
