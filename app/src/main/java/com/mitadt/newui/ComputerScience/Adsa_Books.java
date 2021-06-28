@@ -55,6 +55,7 @@ public class Adsa_Books extends AppCompatActivity {
     String UserId;
     FirebaseAuth fAuth;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -113,6 +114,7 @@ public class Adsa_Books extends AppCompatActivity {
         fileupload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 processupload(filepath);
             }
         });
@@ -139,7 +141,7 @@ public class Adsa_Books extends AppCompatActivity {
         pd.setTitle("File Uploading....!!!");
         pd.show();
 
-        final StorageReference reference=storageReference.child("uploads/"+System.currentTimeMillis()+".pdf");
+        final StorageReference reference=storageReference.child("pdfs/"+System.currentTimeMillis()+".pdf");
         reference.putFile(filepath)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
@@ -149,12 +151,27 @@ public class Adsa_Books extends AppCompatActivity {
                             @Override
                             public void onSuccess(Uri uri) {
                                 String adsa = "ADSA";
-
-                                fileinfomodel obj=new fileinfomodel(filetitle.getText().toString(),uri.toString());
-                                databaseReference.child(databaseReference.push().getKey()).setValue(obj);
-                                DocumentReference documentReference = fstore.collection("BOOKS").document(adsa);
+                                String pdflink,pdfname;
+                                pdflink = uri.toString();
+                                pdfname = filetitle.getText().toString().trim();
+                                UserId = fAuth.getCurrentUser().getUid();
+                                DocumentReference documentReference = fstore.collection("BOOKS").document(pdfname);
                                 Map<String,Object> user = new HashMap<>();
-                                user.put("PDF/BOOKS",obj);
+                                user.put("Pdf Name",pdfname);
+                                user.put("Pdf Link",pdflink);
+
+                                documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+                                        Log.d(TAG, "On success: Book uploaded for " + UserId);
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Log.d(TAG, "On failure " + e.toString());
+
+                                    }
+                                });
 
                                 pd.dismiss();
                                 Toast.makeText(getApplicationContext(),"File Uploaded",Toast.LENGTH_LONG).show();

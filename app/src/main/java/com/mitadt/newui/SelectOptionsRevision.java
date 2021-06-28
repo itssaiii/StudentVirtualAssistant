@@ -42,7 +42,7 @@ public class SelectOptionsRevision extends AppCompatActivity {
                         break;
                     case 1:
                         Toast.makeText(SelectOptionsRevision.this, "Video Library", Toast.LENGTH_SHORT).show();
-
+                        startActivity(new Intent(getApplicationContext(), Adsa_Books.class));
                         break;
 
                     case 2:
