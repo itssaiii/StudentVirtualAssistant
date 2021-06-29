@@ -20,6 +20,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.mitadt.newui.ComputerScience.Adsa_Books;
 import com.mitadt.newui.ComputerScience.ScheduleMeetingAdsa;
 import com.mitadt.newui.FacultyProfile;
 import com.mitadt.newui.LogInOrSignUp;
@@ -45,6 +46,16 @@ public class FacultyDashboard extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faculty_dashboard);
         getSupportActionBar().hide();
+
+
+        //CARDViews Type casting
+        revision = findViewById(R.id.revisionCardView);
+        prof = findViewById(R.id.ProfileCardView);
+        books = findViewById(R.id.AttendanceCardView);
+
+        revision.setOnClickListener(this);
+        prof.setOnClickListener(this);
+        books.setOnClickListener(this);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         sidebar = findViewById(R.id.faculty_sidebar_view);
@@ -133,6 +144,7 @@ public class FacultyDashboard extends AppCompatActivity implements View.OnClickL
         switch (v.getId()){
             case R.id.revisionCardView:
                 Toast.makeText(this, "Revision Portal", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), Adsa_Books.class));
 
                 break;
             case R.id.ProfileCardView:

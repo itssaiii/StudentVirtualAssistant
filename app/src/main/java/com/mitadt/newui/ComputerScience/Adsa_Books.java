@@ -16,12 +16,15 @@ import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -37,6 +40,7 @@ import com.karumi.dexter.listener.PermissionDeniedResponse;
 import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
+import com.mitadt.newui.ViewAdsaBooks;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -54,6 +58,7 @@ public class Adsa_Books extends AppCompatActivity {
     Button fileupload;
     String UserId;
     FirebaseAuth fAuth;
+    TextView viewpdf;
 
 
     @Override
@@ -66,6 +71,12 @@ public class Adsa_Books extends AppCompatActivity {
         fstore = FirebaseFirestore.getInstance();
         fAuth = FirebaseAuth.getInstance();
         filetitle = findViewById(R.id.filetitle);
+
+        viewpdf = findViewById(R.id.viewpdfbyFaculty);
+        SpannableString content = new SpannableString("Click Here to View Uploaded Pdfs");
+        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+        viewpdf.setText(content);
+
 
         imagebrowse = (ImageView)findViewById(R.id.imagebrowse);
         fileupload = findViewById(R.id.uploadButton);
@@ -119,6 +130,14 @@ public class Adsa_Books extends AppCompatActivity {
             }
         });
 
+        //View pdf By Faculty
+        viewpdf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ViewAdsaBooks.class));
+            }
+        });
+
 
     }
 
@@ -157,8 +176,8 @@ public class Adsa_Books extends AppCompatActivity {
                                 UserId = fAuth.getCurrentUser().getUid();
                                 DocumentReference documentReference = fstore.collection("BOOKS").document(pdfname);
                                 Map<String,Object> user = new HashMap<>();
-                                user.put("Pdf Name",pdfname);
-                                user.put("Pdf Link",pdflink);
+                                user.put("filename",pdfname);
+                                user.put("fileurl",pdflink);
 
                                 documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override

@@ -70,19 +70,47 @@
 
     <Button
         android:id="@+id/uploadButton"
-        android:layout_width="189dp"
+        android:layout_width="224dp"
         android:layout_height="56dp"
         android:background="@drawable/button_round"
         android:text="upload"
         android:textAllCaps="true"
+        android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:backgroundTint="#FF0000"
+        app:backgroundTint="#FFE500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/filetitle"
         app:layout_constraintVertical_bias="0.264" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click On Below Image to Browse"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144" />
+
+    <TextView
+        android:id="@+id/viewpdfbyFaculty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Here to View Uploaded Pdfs"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filetitle"
+        app:layout_constraintVertical_bias="0.089" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

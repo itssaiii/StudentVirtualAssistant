@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -17,7 +18,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.mitadt.newui.Admin.AdminDashboard;
+import com.mitadt.newui.InfoTech.InformationTechnology;
 import com.mitadt.newui.R;
 
 public class FacultyLogin extends AppCompatActivity {
@@ -26,6 +27,8 @@ public class FacultyLogin extends AppCompatActivity {
     FirebaseAuth fAuth;
     ProgressBar progressBar;
     TextView ContactAdmin;
+    Intent intent = null;
+    Intent chooser = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +41,7 @@ public class FacultyLogin extends AppCompatActivity {
         Teacherlog = findViewById(R.id.TeacherSignIn);
         fAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.TeacherProgressBar);
-        ContactAdmin = findViewById(R.id.textView13);
+        ContactAdmin = findViewById(R.id.contactadmin);
 
         if(fAuth.getCurrentUser()!=null)
         {
@@ -86,6 +89,15 @@ public class FacultyLogin extends AppCompatActivity {
         ContactAdmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                intent = new Intent(Intent.ACTION_SEND);
+                intent.setData(Uri.parse("mailto"));
+                String[] to = {"studentvirtualassistant.mitsoe@gmail.com"};
+                intent.putExtra(Intent.EXTRA_EMAIL,to);
+                intent.putExtra(Intent.EXTRA_SUBJECT,"Password Reset Request");
+                intent.putExtra(Intent.EXTRA_TEXT,"Kindly Reset the Password of the Account with respect to this Mail-Id");
+                intent.setType("message/rfc822");
+                chooser = Intent.createChooser(intent,"Send Email");
+                startActivity(chooser);
 
             }
         });

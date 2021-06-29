@@ -38,11 +38,11 @@ public class SelectOptionsRevision extends AppCompatActivity {
                 switch (position){
                     case 0:
                         Toast.makeText(SelectOptionsRevision.this, "Books Portal", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), DccnBooks.class));
+                        startActivity(new Intent(getApplicationContext(), ViewAdsaBooks.class));
                         break;
                     case 1:
                         Toast.makeText(SelectOptionsRevision.this, "Video Library", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), Adsa_Books.class));
+
                         break;
 
                     case 2:

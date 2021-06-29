@@ -10,53 +10,95 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:usesCleartextTraffic="true"
+
         android:supportsRtl="true"
         android:theme="@style/Theme.NewUi">
-        <activity android:name=".ComputerScience.JoinAdsaLecture"
+        <activity android:name=".ComputerScience.OpenAdsaPdf"
+            android:label="Open Pdf"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ViewAdsaBooks"
+            android:label="View Adsa Books and Notes"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ComputerScience.JoinAdsaLecture"
+            android:colorMode="hdr"
             android:label="Join ADSA Lecture"
-            android:colorMode="hdr"></activity>
-        <activity android:name=".ComputerScience.ScheduleMeetingAdsa" />
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ComputerScience.ScheduleMeetingAdsa"
+            android:screenOrientation="portrait"/>
         <activity android:name=".ComputerScience.DccnBooks" />
-        <activity android:name=".ComputerScience.Adsa_Books" />
+        <activity android:name=".ComputerScience.Adsa_Books"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".SelectOptionsRevision"
-            android:label="Choose Portal" />
-        <activity android:name=".RateApp" />
-        <activity android:name=".FacultyProfile" />
-        <activity android:name=".StudentProfile" />
+            android:label="Choose Portal"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RateApp"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FacultyProfile"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".StudentProfile"
+            android:screenOrientation="portrait"/>
         <activity android:name=".OtpActivity.testOtpActivity" />
         <activity android:name=".OtpActivity.testPhoneNum" />
-        <activity android:name=".FacultyApp.FacultyDashboard" />
-        <activity android:name=".StudentTwoFactorAuthentication" />
-        <activity android:name=".FacultyTwoFactorAuthentication" />
-        <activity android:name=".TwoFactorAuthentication" />
-        <activity android:name=".Admin.FacultyRegistration" />
-        <activity android:name=".Admin.AdminDashboard" />
-        <activity android:name=".Admin.UniversityPortal" />
-        <activity android:name=".FacultyApp.FacultyLogin" />
-        <activity android:name=".LogInOrSignUp" />
+        <activity android:name=".FacultyApp.FacultyDashboard"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".StudentTwoFactorAuthentication"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FacultyTwoFactorAuthentication"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TwoFactorAuthentication"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Admin.FacultyRegistration"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Admin.AdminDashboard"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Admin.UniversityPortal"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FacultyApp.FacultyLogin"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LogInOrSignUp"
+            android:screenOrientation="portrait"/>
         <activity android:name=".Mechatronics.MechatronicsSubjects" />
-        <activity android:name=".Mechanical.MechanicalSubjects" />
-        <activity android:name=".ENTC.ElectronicsSubjects" />
+        <activity
+            android:name=".Mechanical.MechanicalSubjects"
+            android:label="Mechanical"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ENTC.ElectronicsSubjects"
+            android:label="Eletronics and Tele-communication"
+            android:screenOrientation="portrait"/>
         <activity android:name=".ComputerScience.GermanTeachers" />
         <activity android:name=".ComputerScience.IcttTeachers" />
         <activity android:name=".ComputerScience.SepmTeachers" />
         <activity android:name=".ComputerScience.TocTeachers" />
         <activity android:name=".ComputerScience.DccnTeachers" />
         <activity android:name=".ComputerScience.AdsaTeachers" />
-        <activity android:name=".InfoTech.InformationTechnology" />
-        <activity android:name=".AeroSpace.AeroSpace" />
+        <activity
+            android:name=".InfoTech.InformationTechnology"
+            android:label="Information Technology"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".AeroSpace.AeroSpace"
+            android:label="Aerospace"
+            android:screenOrientation="portrait"/>
         <activity android:name=".otpAfterRegister" />
-        <activity android:name=".ResetPassword" />
+        <activity android:name=".ResetPassword"
+            android:screenOrientation="portrait"/>
         <activity android:name=".changePassword" />
-        <activity android:name=".ForgotPass" />
-        <activity android:name=".VerifyOtp" />
+        <activity android:name=".ForgotPass"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".VerifyOtp"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".login"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.NewUi.NoActionBar" />
         <activity android:name=".Register" />
-        <activity android:name=".RegisterPortal" />
+        <activity android:name=".RegisterPortal"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".login_design"
             android:label="@string/title_activity_login_design"
@@ -68,7 +110,8 @@
             android:theme="@style/Theme.NewUi.NoActionBar" />
         <activity
             android:name=".MainPage"
-            android:label="MainPage" />
+            android:label="MainPage"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
@@ -78,8 +121,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChooseDomain" />
-        <activity android:name=".SubjectChoice" />
+        <activity android:name=".ChooseDomain"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SubjectChoice"
+            android:label="Computer Science"
+            android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="preloaded_fonts"

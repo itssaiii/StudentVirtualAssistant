@@ -100,11 +100,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/contactadmin"
         app:layout_constraintVertical_bias="0.132" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/contactadmin"
         android:layout_width="331dp"
         android:layout_height="32dp"
         android:gravity="center"
