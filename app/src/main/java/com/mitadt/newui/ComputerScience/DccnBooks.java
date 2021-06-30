@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -16,6 +17,7 @@ import androidx.annotation.Nullable;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
@@ -30,11 +32,21 @@ public class DccnBooks extends AppCompatActivity {
     ImageView upload;
     Uri imageuri = null;
     FirebaseFirestore fstore;
-
+    TextView email;
+    String displaymail;
+    FirebaseAuth fAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dccn_books);
+
+
+        email = findViewById(R.id.uploadapdf);
+        fAuth = FirebaseAuth.getInstance();
+        displaymail = fAuth.getCurrentUser().getEmail();
+
+        email.setText(displaymail);
+
 
         upload = findViewById(R.id.uploadpdf);
 

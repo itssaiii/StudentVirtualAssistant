@@ -20,6 +20,7 @@
         app:layout_constraintVertical_bias="0.13" />
 
     <TextView
+        android:id="@+id/uploadapdf"
         android:layout_width="168dp"
         android:layout_height="50dp"
         android:gravity="center"

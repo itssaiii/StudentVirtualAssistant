@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:elevation="4dp"
+    android:layout_margin="6dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#C3DCE8"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/questionprofileview"
+            android:layout_width="36dp"
+            android:layout_height="41dp"
+            android:src="@drawable/logocropped"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.181" />
+
+        <TextView
+            android:id="@+id/fullnameviewquestion"
+            android:layout_width="198dp"
+            android:layout_height="23dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:text="Full Name"
+            android:textColor="@color/black"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.081"
+            app:layout_constraintStart_toEndOf="@+id/questionprofileview"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.172" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="84dp"
+            android:layout_height="13dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="has posted on"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.229"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fullnameviewquestion"
+            app:layout_constraintVertical_bias="0.056" />
+
+        <TextView
+            android:id="@+id/dateviewquestion"
+            android:layout_width="69dp"
+            android:layout_height="12dp"
+            android:ems="10"
+            android:textSize="10sp"
+            android:text="Date"
+            android:gravity="center"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.075"
+            app:layout_constraintStart_toEndOf="@+id/textView26"
+            app:layout_constraintTop_toBottomOf="@+id/fullnameviewquestion"
+            app:layout_constraintVertical_bias="0.056" />
+
+        <TextView
+            android:id="@+id/timeviewquestion"
+            android:layout_width="69dp"
+            android:layout_height="12dp"
+            android:ems="10"
+            android:textSize="10sp"
+            android:text="Time"
+            android:textColor="@color/black"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.871"
+            app:layout_constraintStart_toEndOf="@+id/dateviewquestion"
+            app:layout_constraintTop_toBottomOf="@+id/fullnameviewquestion"
+            app:layout_constraintVertical_bias="0.059" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateviewquestion"
+            app:layout_constraintVertical_bias="0.214" />
+
+        <TextView
+            android:id="@+id/questionview"
+            android:layout_width="341dp"
+            android:layout_height="76dp"
+            android:paddingLeft="10dp"
+            android:text="Question"
+            android:textSize="14sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.568"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2"
+            app:layout_constraintVertical_bias="0.172" />
+
+        <ImageButton
+            android:id="@+id/likebutton"
+            android:layout_width="36dp"
+            android:layout_height="41dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/questionview"
+            app:layout_constraintVertical_bias="0.9"
+            app:srcCompat="@drawable/ic_baseline_thumb_up_24" />
+
+        <TextView
+            android:id="@+id/likesnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 0 Likes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/likebutton"
+            app:layout_constraintTop_toBottomOf="@+id/questionview"
+            app:layout_constraintVertical_bias="0.428" />
+
+        <ImageButton
+            android:id="@+id/commentbutton"
+            android:layout_width="36dp"
+            android:layout_height="41dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.587"
+            app:layout_constraintStart_toEndOf="@+id/likesnumber"
+            app:layout_constraintTop_toBottomOf="@+id/questionview"
+            app:layout_constraintVertical_bias="0.407"
+            app:srcCompat="@drawable/ic_baseline_comment_24" />
+
+        <TextView
+            android:id="@+id/commentsnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 0 Comments"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/commentbutton"
+            app:layout_constraintTop_toBottomOf="@+id/questionview"
+            app:layout_constraintVertical_bias="0.428" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

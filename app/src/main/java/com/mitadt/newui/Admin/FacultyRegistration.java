@@ -111,7 +111,7 @@ public class FacultyRegistration extends AppCompatActivity {
                             Toast.makeText(FacultyRegistration.this, "Added Faculty to Database", Toast.LENGTH_SHORT).show();
 
                             UserId = fAuth.getCurrentUser().getUid();
-                            DocumentReference documentReferences = fstore.collection("FACULTY").document(fname);
+                            DocumentReference documentReferences = fstore.collection("FACULTY").document(email);
                             Map<String,Object> users = new HashMap<>();
                             users.put("fullName",fname);
                             users.put("E-mail",email);

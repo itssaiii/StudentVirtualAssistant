@@ -6,9 +6,23 @@ public class model {
 
     String fileurl;
     String filename;
-    
+
+    public Reference getUrl() {
+        return url;
+    }
+
+    public model(Reference url) {
+        this.url = url;
+    }
+
+    public void setUrl(Reference url) {
+        this.url = url;
+    }
+
+    Reference url;
 
     public model() {
+
     }
 
     public model(String name, String email) {

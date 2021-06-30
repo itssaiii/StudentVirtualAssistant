@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 
@@ -37,6 +38,8 @@ public class FacultyDashboard extends AppCompatActivity implements View.OnClickL
     Toolbar toolbar;
     Menu menu;
     FirebaseAuth fAuth;
+    String displaymail;
+    TextView name;
 
 
 
@@ -62,6 +65,12 @@ public class FacultyDashboard extends AppCompatActivity implements View.OnClickL
         toolbar = findViewById(R.id.facultyToolbar);
         fAuth = FirebaseAuth.getInstance();
         menu = sidebar.getMenu();
+        name = findViewById(R.id.displayname);
+
+        name.setText(displaymail);
+
+        displaymail = fAuth.getCurrentUser().getEmail();
+
 
         sidebar.setItemIconTintList(null);
         toolbar.setTitle("Faculty Dashboard");
