@@ -1,8 +1,10 @@
 package com.mitadt.newui.DiscussionForum;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -10,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mitadt.newui.ComputerScience.myadapter;
+import com.mitadt.newui.MainPage;
 import com.mitadt.newui.R;
 
 import java.util.ArrayList;
@@ -45,6 +48,18 @@ public class questionAdapter extends RecyclerView.Adapter<questionAdapter.myview
         holder.likes.setText(String.valueOf(datalist.get(position).getLikes()));
         holder.comments.setText(String.valueOf(datalist.get(position).getComments()));
 
+        holder.ans.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(holder.ans.getContext(), ViewComments.class);
+                intent.putExtra("title",datalist.get(position).getTitle());
+                intent.putExtra("description",datalist.get(position).getDescription());
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                holder.ans.getContext().startActivity(intent);
+
+            }
+        });
+
 
 
     }
@@ -56,8 +71,9 @@ public class questionAdapter extends RecyclerView.Adapter<questionAdapter.myview
 
     class myviewholder extends RecyclerView.ViewHolder{
 
-        ImageView profilepic;
+        ImageView profilepic,ans;
         TextView date,time,name,likes,comments,question;
+
 
         public myviewholder(@NonNull View itemView) {
             super(itemView);
@@ -69,6 +85,8 @@ public class questionAdapter extends RecyclerView.Adapter<questionAdapter.myview
             likes = itemView.findViewById(R.id.likesnumber);
             comments = itemView.findViewById(R.id.commentsnumber);
             question = itemView.findViewById(R.id.questionview);
+
+            ans = itemView.findViewById(R.id.commentbutton);
 
 
         }

@@ -13,10 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewUi"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DiscussionForum.ViewAllQuestions"
-            android:label="View All Questions"></activity>
-        <activity android:name=".DiscussionForum.AddQuestion"
-            android:label="Post a Question"/>
+        <activity android:name=".VoiceAssistant.VoiceAssistant"></activity>
+        <activity
+            android:name=".DiscussionForum.ViewComments"
+            android:label="View Comments" />
+        <activity android:name=".DiscussionForum.AddAnswer" />
+        <activity
+            android:name=".DiscussionForum.ViewAllQuestions"
+            android:label="View All Questions" />
+        <activity
+            android:name=".DiscussionForum.AddQuestion"
+            android:label="Post a Question" />
         <activity
             android:name=".ComputerScience.OpenAdsaPdf"
             android:label="Open Pdf"

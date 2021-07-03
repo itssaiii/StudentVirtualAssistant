@@ -11,8 +11,8 @@
             android:icon="@drawable/personsmallicon"/>
         <item
             android:id="@+id/settings"
-            android:icon="@drawable/ic_baseline_settings_24"
-            android:title="Settings"/>
+            android:icon="@drawable/ic_baseline_keyboard_voice_24"
+            android:title="Voice Assistant"/>
 
         <item
             android:id="@+id/logout"

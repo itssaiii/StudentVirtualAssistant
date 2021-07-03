@@ -1,6 +1,7 @@
 package com.mitadt.newui;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,17 +11,24 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.mitadt.newui.ComputerScience.Adsa_Books;
+import com.mitadt.newui.VoiceAssistant.VoiceAssistant;
+
+import java.util.ArrayList;
+import java.util.Locale;
 
 public class MainPage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
@@ -37,11 +45,15 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
         getSupportActionBar().hide();
+
+        //VOICE ASSISTANT
+
 
         bottomNavigationView = findViewById(R.id.bottomNavbar);
         logout = findViewById(R.id.StudentSignout);
@@ -148,7 +160,7 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
                 break;
             case R.id.settings:
                 Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getApplicationContext(),ResetPassword.class));
+                startActivity(new Intent(getApplicationContext(), VoiceAssistant.class));
                 break;
 
             case R.id.logout:
@@ -160,6 +172,7 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
                 break;
             case R.id.share:
                 Toast.makeText(this, "Share our App", Toast.LENGTH_SHORT).show();
+
                 break;
 
             case R.id.rate:

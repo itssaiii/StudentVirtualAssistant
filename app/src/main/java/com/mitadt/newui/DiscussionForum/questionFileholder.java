@@ -2,8 +2,20 @@ package com.mitadt.newui.DiscussionForum;
 
 public class questionFileholder {
 
-    String date,description,name,time;
+    String date,description,name,time,title;
     Long likes,comments;
+
+    public questionFileholder(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     public questionFileholder(Long likes, Long comments) {
         this.likes = likes;

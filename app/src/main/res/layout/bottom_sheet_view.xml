@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/entercomment"
+        android:layout_width="match_parent"
+        android:layout_height="188dp"
+        android:background="@drawable/borderrectangle"
+        android:gravity="start"
+        android:hint="Enter the Comment"
+        android:inputType="textMultiLine"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/sendbutton"
+        android:layout_width="90dp"
+        android:layout_height="28dp"
+        android:background="#FFFFFF"
+        android:layout_gravity="right"
+        app:srcCompat="@drawable/ic_baseline_send_24"
+        tools:layout_editor_absoluteX="259dp"
+        tools:layout_editor_absoluteY="434dp" />
+
+</LinearLayout>

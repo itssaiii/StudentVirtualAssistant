@@ -39,13 +39,18 @@
             android:background="@drawable/borderrectangle"
             android:ems="10"
             android:gravity="start|top"
+            android:hint="Enter the Description"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+
             android:inputType="textMultiLine"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ptitle"
-            app:layout_constraintVertical_bias="0.093" />
+            app:layout_constraintVertical_bias="0.079" />
 
         <Button
             android:id="@+id/pupload"
