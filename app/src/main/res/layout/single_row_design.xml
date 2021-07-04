@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="5dp"
+    android:id="@+id/pdfview"
     android:elevation="4dp"
     app:cardUseCompatPadding="true">
 

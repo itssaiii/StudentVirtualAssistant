@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mitadt.newui.R;
@@ -44,6 +45,13 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder> {
 
             }
         });
+
+        holder.pune.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override
@@ -54,11 +62,13 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder> {
     public class myviewholder extends RecyclerView.ViewHolder {
         TextView t1;
         ImageView img1;
+
+        CardView pune;
         public myviewholder(@NonNull View itemView) {
             super(itemView);
             img1 = itemView.findViewById(R.id.viewpdfimage);
             t1=itemView.findViewById(R.id.viewpdfname);
-
+            pune = itemView.findViewById(R.id.pdfview);
 
         }
     }

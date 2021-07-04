@@ -28,7 +28,7 @@ public class SelectOptionsRevision extends AppCompatActivity {
 
         mlistView = findViewById(R.id.listview);
 
-        final String[] text = {"Books And Pdf", "Video Library", "Doubt Forum", "Feedback Forum","Join Lecture"," "};
+        final String[] text = {"Books And Pdf", "Video Library", "Doubt Forum", "Feedback Forum","Join Lecture", " "};
 
         mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, text);
         mlistView.setAdapter(mAdapter);

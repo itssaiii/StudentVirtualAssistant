@@ -25,6 +25,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.mitadt.newui.ComputerScience.Adsa_Books;
+import com.mitadt.newui.Ebook.EbooksMainPage;
 import com.mitadt.newui.VoiceAssistant.VoiceAssistant;
 
 import java.util.ArrayList;
@@ -206,6 +207,8 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
 
             case R.id.VirtualLibrary:
                 Toast.makeText(this, "Virtual Library", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), EbooksMainPage.class));
+
                 break;
 
             default:

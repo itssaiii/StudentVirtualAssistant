@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="ResetPass"
     android:orientation="vertical"
     tools:context=".StudentProfile">
 
@@ -30,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Aditi Mahadware"
+            android:text="Abhishek Saigiridhari"
             android:textColor="@color/colorAccent"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -71,7 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
-            android:text="Aditi"
+            android:text="Abhishek"
             android:textColor="@android:color/darker_gray"
             android:textSize="18dp" />
 
@@ -113,7 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
-            android:text="Mahadware"
+            android:text="Saigiridhari"
             android:textColor="@android:color/darker_gray"
             android:textSize="18dp" />
 
@@ -155,7 +154,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="64dp"
-            android:text="ma.aditi1089@gmail.com"
+            android:text="abhisheksaigiridhari@gmail.com"
             android:textColor="@android:color/darker_gray"
             android:textSize="18dp" />
 
@@ -221,6 +220,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/editprofilestudent"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:layout_marginLeft="-10dp"
@@ -233,6 +233,7 @@
             android:textSize="18dp" />
 
         <TextView
+            android:id="@+id/resetpassstudent"
             android:layout_width="240dp"
             android:layout_height="50dp"
             android:layout_marginLeft="-10dp"

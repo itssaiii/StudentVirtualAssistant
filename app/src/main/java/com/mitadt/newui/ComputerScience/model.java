@@ -7,6 +7,7 @@ public class model {
     String fileurl;
     String filename;
 
+
     public Reference getUrl() {
         return url;
     }

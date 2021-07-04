@@ -12,7 +12,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class StudentProfile extends AppCompatActivity {
 
-    TextView fullname;
+    TextView fullname,editprof,resetpass;
     FirebaseFirestore fstore;
     FirebaseAuth fAuth;
     String email;
@@ -29,16 +29,19 @@ public class StudentProfile extends AppCompatActivity {
         fstore = FirebaseFirestore.getInstance();
         fAuth = FirebaseAuth.getInstance();
 
-        email =fAuth.getCurrentUser().getEmail();
-        fullname.setText(email);
+        resetpass = findViewById(R.id.resetpassstudent);
+        resetpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),ResetPassword.class));
+            }
+        });
 
 
 
 
 
-    }
 
-    public void ResetPass(View view){
-        startActivity(new Intent(getApplicationContext(),ResetPassword.class));
+
     }
 }

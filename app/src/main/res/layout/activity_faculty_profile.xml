@@ -235,17 +235,18 @@
             android:layout_marginLeft="-10dp" />
 
         <TextView
+            android:id="@+id/resetpassfaculty"
             android:layout_width="240dp"
             android:layout_height="50dp"
-            android:background="@drawable/bg_btn"
-            android:text="Change Password"
-            android:gravity="center"
-            android:textColor="@color/colorAccent"
-            android:textSize="18dp"
-            android:drawableLeft="@drawable/ic_lock"
-            android:paddingLeft="20dp"
             android:layout_marginLeft="-10dp"
-            android:layout_marginTop="15dp"/>
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_btn"
+            android:drawableLeft="@drawable/ic_lock"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:text="Change Password"
+            android:textColor="@color/colorAccent"
+            android:textSize="18dp" />
 
 
 

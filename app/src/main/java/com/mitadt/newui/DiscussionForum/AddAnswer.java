@@ -29,6 +29,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.mitadt.newui.R;
+import com.mitadt.newui.SelectOptionsRevision;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -77,14 +78,13 @@ public class AddAnswer extends AppCompatActivity {
                 });
 
 
-        recview = findViewById(R.id.recviewcomment);
-        recview.setLayoutManager(new LinearLayoutManager(this));
+
 
         answerlist = new ArrayList<>();
 
 
         adapter = new commentAdapter(answerlist);
-        recview.setAdapter(adapter);
+
 
 
 
@@ -182,7 +182,7 @@ public class AddAnswer extends AppCompatActivity {
                                     add.setVisibility(View.VISIBLE);
                                     bottomSheetDialog.dismiss();
                                     Toast.makeText(AddAnswer.this, "Comment has been Added Successfully", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(getApplicationContext(),ViewComments.class));
+                                    startActivity(new Intent(getApplicationContext(), SelectOptionsRevision.class));
                                     finish();
                                 }
                             }).addOnFailureListener(new OnFailureListener() {

@@ -82,7 +82,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="17dp"
                 android:fontFamily="@font/aclonica"
-                android:text="Virtual Library"
+                android:text="E-book Portal"
                 android:textAllCaps="true"
                 android:textColor="@color/black"
                 android:textSize="24sp"

@@ -19,19 +19,23 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.mitadt.newui.ChooseDomain;
 import com.mitadt.newui.ComputerScience.Adsa_Books;
 import com.mitadt.newui.ComputerScience.ScheduleMeetingAdsa;
+import com.mitadt.newui.DiscussionForum.ViewAllQuestions;
 import com.mitadt.newui.FacultyProfile;
 import com.mitadt.newui.LogInOrSignUp;
+import com.mitadt.newui.MainPage;
 import com.mitadt.newui.R;
 
 public class FacultyDashboard extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
     Button Signout;
     private AlertDialog mAlertDialog;
     private AlertDialog.Builder builder;
-
+    BottomNavigationView bottomNavigationView;
     CardView revision,prof,books;
     DrawerLayout drawerLayout;
     NavigationView sidebar;
@@ -49,6 +53,31 @@ public class FacultyDashboard extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faculty_dashboard);
         getSupportActionBar().hide();
+
+        bottomNavigationView = findViewById(R.id.bottomNavbarFaculty);
+
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case  R.id.home:
+                        Toast.makeText(FacultyDashboard.this, "This is Home Page", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(),FacultyDashboard.class));
+                        break;
+                    case R.id.attendance:
+                        Toast.makeText(FacultyDashboard.this, "Schedule Lectures", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), ScheduleMeetingAdsa.class));
+                        break;
+                    case R.id.doubt:
+                        startActivity(new Intent(getApplicationContext(), ViewAllQuestions.class));
+                        break;
+                }
+                return true;
+            }
+        });
+
+
 
 
         //CARDViews Type casting
@@ -152,15 +181,16 @@ public class FacultyDashboard extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.revisionCardView:
-                Toast.makeText(this, "Revision Portal", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Upload Notes", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), Adsa_Books.class));
 
                 break;
             case R.id.ProfileCardView:
-                Toast.makeText(this, "Profile Page", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Doubt Forum", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), ViewAllQuestions.class));
                 break;
             case R.id.AttendanceCardView:
-                Toast.makeText(this, "Attendance Portal", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Schedule Lectures", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), ScheduleMeetingAdsa.class));
                 break;
 

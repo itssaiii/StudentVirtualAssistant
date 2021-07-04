@@ -7,43 +7,36 @@
     tools:context=".DiscussionForum.AddAnswer">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recviewcomment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </LinearLayout>
-
-
-
-
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addanswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/addanswer"
         android:backgroundTint="#FF1100"
         android:clickable="true"
         android:scaleType="center"
         android:src="@drawable/ic_baseline_plus_circle_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.92"
+        app:layout_constraintVertical_bias="0.242"
         app:maxImageSize="56dp" />
 
-
-
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a Comment"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addanswer"
+        app:layout_constraintVertical_bias="0.108" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
