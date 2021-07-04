@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -14,6 +15,10 @@
         android:theme="@style/Theme.NewUi"
         android:usesCleartextTraffic="true">
         <activity android:name=".VoiceAssistant.VoiceAssistant"></activity>
+        <activity android:name=".Videos.MainActivity"
+            android:label="Videos"/>
+        <activity android:name=".Videos.AddVideo"
+            android:label="Upload Videos"/>
         <activity
             android:name=".DiscussionForum.ViewComments"
             android:label="View Comments" />
