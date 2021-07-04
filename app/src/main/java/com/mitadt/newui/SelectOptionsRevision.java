@@ -15,6 +15,7 @@ import com.mitadt.newui.ComputerScience.DccnBooks;
 import com.mitadt.newui.ComputerScience.JoinAdsaLecture;
 import com.mitadt.newui.ComputerScience.ScheduleMeetingAdsa;
 import com.mitadt.newui.DiscussionForum.ViewAllQuestions;
+import com.mitadt.newui.Videos.MainActivity;
 
 public class SelectOptionsRevision extends AppCompatActivity {
     private ListView mlistView;
@@ -43,7 +44,7 @@ public class SelectOptionsRevision extends AppCompatActivity {
                         break;
                     case 1:
                         Toast.makeText(SelectOptionsRevision.this, "Video Library", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), DccnBooks.class));
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         break;
 
                     case 2:

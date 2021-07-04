@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_button2"
+    android:padding="10dp"
+    tools:context=".Videos.AddVideo">
+
+    <EditText
+        android:id="@+id/videotitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:hint="Enter Title"
+        android:inputType="textPersonName|textCapSentences"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        />
+
+    <VideoView
+        android:id="@+id/videoview"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/videotitle"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/pickvideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/videoview"
+        android:layout_marginTop="5dp"
+        android:text="Pick Video"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:background="@drawable/custom_button"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/uploadvideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pickvideo"
+        android:layout_marginTop="15dp"
+        android:text="Upload Video"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:background="@drawable/custom_button"
+        android:textColor="@color/black"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavbarFaculty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FB1100"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/faculty_bottom_navbar">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+
+
+</RelativeLayout>

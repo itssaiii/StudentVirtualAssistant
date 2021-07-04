@@ -4,7 +4,11 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
 
     <application
         android:allowBackup="true"
@@ -13,11 +17,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.NewUi"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.NewUi">
+
         <activity android:name=".Ebook.BookDetails"></activity>
         <activity android:name=".Ebook.EbooksMainPage" />
         <activity android:name=".VoiceAssistant.VoiceAssistant" />
+
+
+        <activity android:name=".Videos.MainActivity"
+            android:label="Videos"/>
+        <activity android:name=".Videos.AddVideo"
+            android:label="Upload Videos"/>
+
         <activity
             android:name=".DiscussionForum.ViewComments"
             android:label="View Comments" />
@@ -87,10 +99,11 @@
         <activity
             android:name=".FacultyApp.FacultyLogin"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".LogInOrSignUp"
-            android:screenOrientation="portrait" />
-        <activity android:name=".Mechatronics.MechatronicsSubjects" />
+
+            <activity
+                android:name=".LogInOrSignUp"
+                android:screenOrientation="portrait" />
+
         <activity
             android:name=".Mechanical.MechanicalSubjects"
             android:label="Mechanical"
@@ -117,18 +130,14 @@
         <activity
             android:name=".ResetPassword"
             android:screenOrientation="portrait" />
-        <activity android:name=".changePassword" />
+
         <activity
             android:name=".ForgotPass"
             android:screenOrientation="portrait" />
         <activity
             android:name=".VerifyOtp"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".login"
-            android:label="@string/title_activity_login"
-            android:theme="@style/Theme.NewUi.NoActionBar" />
-        <activity android:name=".Register" />
+
         <activity
             android:name=".RegisterPortal"
             android:screenOrientation="portrait" />
@@ -137,10 +146,7 @@
             android:label="@string/title_activity_login_design"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NewUi.NoActionBar" />
-        <activity
-            android:name=".LoginDesign"
-            android:label="@string/title_activity_login_design"
-            android:theme="@style/Theme.NewUi.NoActionBar" />
+
         <activity
             android:name=".MainPage"
             android:label="MainPage"
