@@ -1,12 +1,14 @@
 package com.mitadt.newui.ComputerScience;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.view.View;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.mitadt.newui.R;
 
@@ -14,13 +16,27 @@ import java.net.URLEncoder;
 
 public class OpenAdsaPdf extends AppCompatActivity {
     WebView pdf;
+    WebSettings webSettings;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_open_adsa_pdf);
 
+
+
         pdf  = findViewById(R.id.viewpdf);
         pdf.getSettings().setJavaScriptEnabled(true);
+        pdf.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
+        pdf.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+        pdf.getSettings().setAppCacheEnabled(true);
+        pdf.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+        webSettings = pdf.getSettings();
+        webSettings.setDomStorageEnabled(true);
+
+
+        webSettings.setSavePassword(true);
+        webSettings.setSaveFormData(true);
+        webSettings.setEnableSmoothTransition(true);
 
         String filename=getIntent().getStringExtra("filename");
         String fileurl=getIntent().getStringExtra("fileurl");
@@ -49,7 +65,7 @@ public class OpenAdsaPdf extends AppCompatActivity {
         }catch (Exception ex){
 
         }
-        pdf.loadUrl("http://docs.google.com/gview?embedded=true&url=" + link);
+        pdf.loadUrl("https://docs.google.com/gview?embedded=true&url=" + link);
 
     }
 }

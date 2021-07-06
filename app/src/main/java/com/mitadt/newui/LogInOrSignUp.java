@@ -1,16 +1,14 @@
 package com.mitadt.newui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
 import com.google.firebase.auth.FirebaseAuth;
-import com.mitadt.newui.Admin.AdminDashboard;
-import com.mitadt.newui.Admin.UniversityPortal;
-import com.mitadt.newui.FacultyApp.FacultyLogin;
 
 public class LogInOrSignUp extends AppCompatActivity {
 
@@ -18,6 +16,7 @@ public class LogInOrSignUp extends AppCompatActivity {
     FirebaseAuth fAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in_or_sign_up);
         getSupportActionBar().hide();

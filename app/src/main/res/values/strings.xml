@@ -22,6 +22,20 @@
         <item>Mechatronics</item>
     </string-array>
 
+
+    <string name="string"><![CDATA[<-]]></string>
+    <string name="string2"><![CDATA[->]]></string>
+    <string name="weekly">Weekly</string>
+    <string name="feb_2021">Feb 2021</string>
+    <string name="strings"><![CDATA[->]]></string>
+    <string name="sun">SUN</string>
+    <string name="mon">MON</string>
+    <string name="tue">TUE</string>
+    <string name="wed">WED</string>
+    <string name="thur">THUR</string>
+    <string name="fri">FRI</string>
+    <string name="sat">SAT</string>
+
     <string name="navigation_drawer_open">Open SideBar</string>
     <string name="navigation_drawer_close">Close SideBar</string>
 

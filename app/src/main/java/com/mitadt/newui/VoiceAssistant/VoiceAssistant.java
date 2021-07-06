@@ -1,8 +1,5 @@
 package com.mitadt.newui.VoiceAssistant;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
@@ -10,6 +7,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.mitadt.newui.DiscussionForum.ViewAllQuestions;
@@ -69,6 +69,7 @@ public class VoiceAssistant extends AppCompatActivity {
         if(requestCode==1000 && resultCode==RESULT_OK) {
 
             ArrayList<String> commands = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+
             String raw = commands.get(0);
             String[] arrSplit = raw.split(" ");
 

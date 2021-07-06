@@ -182,7 +182,7 @@ public class FacultyDashboard extends AppCompatActivity implements View.OnClickL
         switch (v.getId()){
             case R.id.revisionCardView:
                 Toast.makeText(this, "Upload Notes", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getApplicationContext(), Adsa_Books.class));
+                startActivity(new Intent(getApplicationContext(), BooksOrVideos.class));
 
                 break;
             case R.id.ProfileCardView:

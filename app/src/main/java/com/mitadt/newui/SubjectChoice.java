@@ -1,20 +1,12 @@
 package com.mitadt.newui;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.mitadt.newui.ComputerScience.AdsaTeachers;
-import com.mitadt.newui.ComputerScience.DccnTeachers;
-import com.mitadt.newui.ComputerScience.GermanTeachers;
-import com.mitadt.newui.ComputerScience.IcttTeachers;
-import com.mitadt.newui.ComputerScience.SepmTeachers;
-import com.mitadt.newui.ComputerScience.TocTeachers;
-import com.mitadt.newui.R;
-import com.mitadt.newui.SelectOptionsRevision;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.cardview.widget.CardView;
 
 public class SubjectChoice extends AppCompatActivity implements View.OnClickListener {
 
@@ -22,6 +14,7 @@ public class SubjectChoice extends AppCompatActivity implements View.OnClickList
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subject_choice);
 

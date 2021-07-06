@@ -4,15 +4,12 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mitadt.newui.ComputerScience.myadapter;
-import com.mitadt.newui.MainPage;
 import com.mitadt.newui.R;
 
 import java.util.ArrayList;
@@ -73,7 +70,7 @@ public class questionAdapter extends RecyclerView.Adapter<questionAdapter.myview
 
         ImageView profilepic,ans;
         TextView date,time,name,likes,comments,question;
-
+        ImageView likebtn;
 
         public myviewholder(@NonNull View itemView) {
             super(itemView);
@@ -85,8 +82,9 @@ public class questionAdapter extends RecyclerView.Adapter<questionAdapter.myview
             likes = itemView.findViewById(R.id.likesnumber);
             comments = itemView.findViewById(R.id.commentsnumber);
             question = itemView.findViewById(R.id.questionview);
-
+            likebtn = itemView.findViewById(R.id.likebutton);
             ans = itemView.findViewById(R.id.commentbutton);
+
 
 
         }

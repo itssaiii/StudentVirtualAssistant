@@ -1,7 +1,5 @@
 package com.mitadt.newui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,9 +8,16 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.PhoneAuthProvider;
-import java.util.concurrent.TimeUnit;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.Source;
 
 public class ForgotPass extends AppCompatActivity {
     public String NumberEnteredByUser;
@@ -20,10 +25,13 @@ public class ForgotPass extends AppCompatActivity {
     Button GenerateOtp;
     FirebaseAuth fAuth;
     ProgressBar progressBar;
+    FirebaseFirestore fstore;
+    String email;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_pass);
         getSupportActionBar().hide();
@@ -31,6 +39,7 @@ public class ForgotPass extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         mPhoneNumber = findViewById(R.id.numberphone);
         GenerateOtp = findViewById(R.id.proceedBtn);
+        fstore = FirebaseFirestore.getInstance();
 
 
 
@@ -57,9 +66,23 @@ public class ForgotPass extends AppCompatActivity {
                     return;
                 }
 
-                Intent intent = new Intent(getApplicationContext(),VerifyOtp.class);
-                intent.putExtra("phoneNo",num);
-                startActivity(intent);
+                fstore.collection("USERS").whereEqualTo("Phone-No",num)
+                        .get(Source.SERVER)
+                        .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                            @Override
+                            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                                Intent intent = new Intent(getApplicationContext(),VerifyOtp.class);
+                                intent.putExtra("phoneNo",num);
+                                startActivity(intent);
+
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(ForgotPass.this, "This Number is not associated with any user ", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                
 
 
 

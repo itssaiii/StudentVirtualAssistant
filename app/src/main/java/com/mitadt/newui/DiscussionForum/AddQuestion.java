@@ -1,8 +1,5 @@
 package com.mitadt.newui.DiscussionForum;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -32,6 +32,8 @@ public class AddQuestion extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fstore;
     String storetitle,storedescription,email,name;
+    Integer likes,comments;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +52,8 @@ public class AddQuestion extends AppCompatActivity {
 
         email = fAuth.getCurrentUser().getEmail();
 
+        likes = 0;
+        comments = 0;
 
 
         //FETCHING NAME OF CURRENT USER FROM FIRESTORE
@@ -92,6 +96,8 @@ public class AddQuestion extends AppCompatActivity {
                 user.put("description",storedescription);
                 user.put("date",savedate);
                 user.put("time",savetime);
+                user.put("likes",likes);
+                user.put("comments",comments);
 
                 documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override

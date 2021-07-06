@@ -18,13 +18,14 @@
             android:id="@+id/idEdtSearchBooks"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="4" />
+            android:layout_weight="4"
+            android:hint="Enter Name of Book" />
 
         <!--image button for our search button -->
         <ImageButton
             android:id="@+id/idBtnSearch"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="73dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/teal_200"
             android:src="@drawable/ic_search" />

@@ -3,7 +3,28 @@ package com.mitadt.newui.DiscussionForum;
 public class questionFileholder {
 
     String date,description,name,time,title;
-    Long likes,comments;
+    Integer likes,comments;
+
+    public questionFileholder(Integer likes, Integer comments) {
+        this.likes = likes;
+        this.comments = comments;
+    }
+
+    public Integer getLikes() {
+        return likes;
+    }
+
+    public void setLikes(Integer likes) {
+        this.likes = likes;
+    }
+
+    public Integer getComments() {
+        return comments;
+    }
+
+    public void setComments(Integer comments) {
+        this.comments = comments;
+    }
 
     public questionFileholder(String title) {
         this.title = title;
@@ -17,26 +38,8 @@ public class questionFileholder {
         this.title = title;
     }
 
-    public questionFileholder(Long likes, Long comments) {
-        this.likes = likes;
-        this.comments = comments;
-    }
 
-    public Long getLikes() {
-        return likes;
-    }
 
-    public void setLikes(Long likes) {
-        this.likes = likes;
-    }
-
-    public Long getComments() {
-        return comments;
-    }
-
-    public void setComments(Long comments) {
-        this.comments = comments;
-    }
 
     public String getDate() {
         return date;

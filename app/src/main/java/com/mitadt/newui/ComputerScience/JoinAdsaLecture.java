@@ -1,6 +1,5 @@
 package com.mitadt.newui.ComputerScience;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,15 +7,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.mitadt.newui.R;
 
 public class JoinAdsaLecture extends AppCompatActivity {
@@ -33,10 +28,10 @@ public class JoinAdsaLecture extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join_adsa_lecture);
 
-        textTopic = findViewById(R.id.topicView);
-        textDate = findViewById(R.id.DateView);
-        TextTime= findViewById(R.id.TimeView);
-        join = findViewById(R.id.joinButton);
+        textTopic = findViewById(R.id.topicviewset);
+        textDate = findViewById(R.id.setDateView);
+        TextTime= findViewById(R.id.DataTimeView);
+        join = findViewById(R.id.joinmeetingbutton);
 
 
 

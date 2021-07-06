@@ -1,7 +1,5 @@
 package com.mitadt.newui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,10 +8,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.mitadt.newui.ComputerScience.Adsa_Books;
-import com.mitadt.newui.ComputerScience.DccnBooks;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
 import com.mitadt.newui.ComputerScience.JoinAdsaLecture;
-import com.mitadt.newui.ComputerScience.ScheduleMeetingAdsa;
 import com.mitadt.newui.DiscussionForum.ViewAllQuestions;
 import com.mitadt.newui.Videos.MainActivity;
 
@@ -23,13 +21,14 @@ public class SelectOptionsRevision extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_options_revision);
 
 
         mlistView = findViewById(R.id.listview);
 
-        final String[] text = {"Books And Pdf", "Video Library", "Doubt Forum", "Feedback Forum","Join Lecture", " "};
+        final String[] text = {"Books And Pdf", "Doubt Forum", " Video Library", "Feedback Forum","Join Lecture", " "};
 
         mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, text);
         mlistView.setAdapter(mAdapter);
@@ -43,13 +42,13 @@ public class SelectOptionsRevision extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), ViewAdsaBooks.class));
                         break;
                     case 1:
-                        Toast.makeText(SelectOptionsRevision.this, "Video Library", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        Toast.makeText(SelectOptionsRevision.this, "Doubt Forum", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), ViewAllQuestions.class));
                         break;
 
                     case 2:
-                        Toast.makeText(SelectOptionsRevision.this, "Doubt Forum", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), ViewAllQuestions.class));
+                        Toast.makeText(SelectOptionsRevision.this, "Video Library", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         break;
 
                     case 3:
