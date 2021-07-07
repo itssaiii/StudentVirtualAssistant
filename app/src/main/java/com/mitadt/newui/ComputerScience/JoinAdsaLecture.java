@@ -1,13 +1,13 @@
 package com.mitadt.newui.ComputerScience;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -50,8 +50,8 @@ public class JoinAdsaLecture extends AppCompatActivity {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 if(documentSnapshot.exists()){
                     retrievedLink = documentSnapshot.getString("Meeting Link");
-                    retrievedDate = documentSnapshot.getString("Date");
-                    retrievedTime = documentSnapshot.getString("Time");
+                    retrievedDate = documentSnapshot.getString("LectureDate");
+                    retrievedTime = documentSnapshot.getString("LectureTime");
                     retrievedTopic = documentSnapshot.getString("Topic");
 
                     textTopic.setText("TOPIC: " + retrievedTopic);

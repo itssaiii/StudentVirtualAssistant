@@ -11,7 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
-import com.mitadt.newui.ComputerScience.JoinAdsaLecture;
+import com.mitadt.newui.ComputerScience.ZoomLecture;
 import com.mitadt.newui.DiscussionForum.ViewAllQuestions;
 import com.mitadt.newui.Videos.MainActivity;
 
@@ -58,7 +58,7 @@ public class SelectOptionsRevision extends AppCompatActivity {
 
                     case 4:
                         Toast.makeText(SelectOptionsRevision.this, "Join Lecture", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), JoinAdsaLecture.class));
+                        startActivity(new Intent(getApplicationContext(), ZoomLecture.class));
                         break;
 
                     default:

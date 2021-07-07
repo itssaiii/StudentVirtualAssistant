@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:id="@+id/pdfview"
+    android:elevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <FrameLayout
+        android:background="#FF0000"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:padding="16dp">
+
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="121dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.018"
+            app:srcCompat="@drawable/zoomvectorasset" />
+
+        <TextView
+            android:id="@+id/zoomTopic"
+            android:layout_width="212dp"
+            android:layout_height="52dp"
+            android:paddingLeft="10dp"
+            android:text="Topic : "
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView24"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/zoomDate"
+            android:layout_width="212dp"
+            android:layout_height="31dp"
+            android:gravity="start"
+            android:text="Date : "
+            android:paddingLeft="10dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView24"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/zoomTopic"
+            app:layout_constraintVertical_bias="0.046" />
+
+        <TextView
+            android:id="@+id/zoomTime"
+            android:layout_width="212dp"
+            android:layout_height="31dp"
+            android:text="Time : "
+            android:textColor="#000000"
+            android:paddingLeft="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView24"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/zoomDate"
+            app:layout_constraintVertical_bias="0.065" />
+
+        <Button
+            android:id="@+id/zoomJoin"
+            android:layout_width="196dp"
+            android:layout_height="46dp"
+            android:text="Join Meeting"
+            app:backgroundTint="#008EFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.026"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/zoomTime"
+            app:layout_constraintVertical_bias="0.314" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.mitadt.newui.ComputerScience.ZoomLecture;
 import com.mitadt.newui.DiscussionForum.ViewAllQuestions;
 import com.mitadt.newui.LogInOrSignUp;
 import com.mitadt.newui.R;
@@ -91,6 +92,10 @@ public class VoiceAssistant extends AppCompatActivity {
             {
                 startActivity(new Intent(getApplicationContext(), ViewAllQuestions.class));
 
+            }
+            else if(command.getText().toString().equals("join lecture"))
+            {
+                startActivity(new Intent(getApplicationContext(), ZoomLecture.class));
             }
             else {
                 Toast.makeText(this, "Invalid Command", Toast.LENGTH_SHORT).show();

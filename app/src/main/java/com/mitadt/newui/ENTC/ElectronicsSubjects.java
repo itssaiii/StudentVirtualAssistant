@@ -1,19 +1,14 @@
 package com.mitadt.newui.ENTC;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.mitadt.newui.ComputerScience.AdsaTeachers;
-import com.mitadt.newui.ComputerScience.DccnTeachers;
-import com.mitadt.newui.ComputerScience.GermanTeachers;
-import com.mitadt.newui.ComputerScience.IcttTeachers;
-import com.mitadt.newui.ComputerScience.SepmTeachers;
-import com.mitadt.newui.ComputerScience.TocTeachers;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import com.mitadt.newui.R;
+import com.mitadt.newui.SelectOptionsRevision;
 
 public class ElectronicsSubjects extends AppCompatActivity implements View.OnClickListener{
 
@@ -48,12 +43,12 @@ public class ElectronicsSubjects extends AppCompatActivity implements View.OnCli
     public void onClick(View v) {
         //HERE WE ARE TAKING A SWITCH CASE SO THAT WHEN THE USER CLICKS THE CARD VIEW, THE RESPONSE SHOULD BE TO GO TO THE NEXT ACTIVITY
         switch (v.getId()){
-            case R.id.adsa: startActivity(new Intent(getApplicationContext(), AdsaTeachers.class));break;
-            case R.id.controlSystems: startActivity(new Intent(getApplicationContext(), DccnTeachers.class)); break;
-            case R.id.analogCommunication: startActivity(new Intent(getApplicationContext(), TocTeachers.class)); break;
-            case R.id.computerOrganisation: startActivity(new Intent(getApplicationContext(), SepmTeachers.class)); break;
-            case R.id.linearIntegratedCircuit: startActivity(new Intent(getApplicationContext(), IcttTeachers.class)); break;
-            case R.id.german: startActivity(new Intent(getApplicationContext(), GermanTeachers.class)); break;
+            case R.id.adsa: startActivity(new Intent(getApplicationContext(), SelectOptionsRevision.class));break;
+            case R.id.controlSystems: startActivity(new Intent(getApplicationContext(), SelectOptionsRevision.class)); break;
+            case R.id.analogCommunication: startActivity(new Intent(getApplicationContext(), SelectOptionsRevision.class)); break;
+            case R.id.computerOrganisation: startActivity(new Intent(getApplicationContext(), SelectOptionsRevision.class)); break;
+            case R.id.linearIntegratedCircuit: startActivity(new Intent(getApplicationContext(), SelectOptionsRevision.class)); break;
+            case R.id.german: startActivity(new Intent(getApplicationContext(), SelectOptionsRevision.class)); break;
 
 
             default:break;

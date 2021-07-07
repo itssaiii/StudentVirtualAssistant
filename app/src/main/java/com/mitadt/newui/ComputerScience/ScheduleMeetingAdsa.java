@@ -1,13 +1,9 @@
 package com.mitadt.newui.ComputerScience;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,17 +11,20 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.mitadt.newui.R;
-import com.mitadt.newui.ResetPassword;
-import com.mitadt.newui.VerifyOtp;
 
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class ScheduleMeetingAdsa extends AppCompatActivity {
 
@@ -33,9 +32,10 @@ public class ScheduleMeetingAdsa extends AppCompatActivity {
     public static final String TAG = "TAG";
     EditText date,time,meeting,discussion;
     DatePickerDialog.OnDateSetListener onDateSetListener;
-    String timeset,dateset,link,topic;
+    String timeset,dateset,link,topic,randomPostkey,UserId;
     Button schedule;
     FirebaseFirestore fstore;
+    FirebaseAuth firebaseAuth;
 
 
     @Override
@@ -45,7 +45,7 @@ public class ScheduleMeetingAdsa extends AppCompatActivity {
 
         //FIRESTORE
         fstore = FirebaseFirestore.getInstance();
-
+        firebaseAuth = FirebaseAuth.getInstance();
         //DATEPICKER
         date = findViewById(R.id.date);
         date.setOnClickListener(new View.OnClickListener() {
@@ -106,7 +106,7 @@ public class ScheduleMeetingAdsa extends AppCompatActivity {
         //topic of discussion
         discussion = findViewById(R.id.topic);
         topic = discussion.getText().toString().trim();
-
+        UserId = firebaseAuth.getCurrentUser().getUid();
 
 
 
@@ -118,20 +118,21 @@ public class ScheduleMeetingAdsa extends AppCompatActivity {
                 link = meeting.getText().toString().trim();
                 topic = discussion.getText().toString().trim();
 
-
+                randomPostkey = UserId+""+new Random().nextInt(1000);
                 String lec = "Adsa";
                 //firestore -> storing meeting info
-                DocumentReference documentReference = fstore.collection("LECTURES").document(lec);
+                DocumentReference documentReference = fstore.collection("LECTURES").document(randomPostkey);
                 Map<String,Object> user = new HashMap<>();
-                user.put("Date",dateset);
-                user.put("Time",timeset);
+                user.put("LectureDate",dateset);
+                user.put("LectureTime",timeset);
                 user.put("Topic",topic);
-                user.put("Meeting Link",link);
+                user.put("MeetingLink",link);
 
                 documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        Log.d(TAG, "On success: User profile is created for ");
+                        Log.d(TAG, "On success: Lecture has Been Scheduled ");
+                        startActivity(new Intent(getApplicationContext(),ZoomLecture.class));
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -141,12 +142,6 @@ public class ScheduleMeetingAdsa extends AppCompatActivity {
                     }
                 });
 
-                Intent intent = new Intent(getApplicationContext(), JoinAdsaLecture.class);
-                intent.putExtra("Date",dateset);
-                intent.putExtra("Time",timeset);
-                intent.putExtra("Link",link);
-                intent.putExtra("Topic",topic);
-                startActivity(intent);
             }
         });
     }

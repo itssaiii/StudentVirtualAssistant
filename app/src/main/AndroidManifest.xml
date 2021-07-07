@@ -7,8 +7,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
-    android:hardwareAccelerated="true"
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewUi"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DailyPlanner.EventEditActivity"></activity>
+        <activity android:name=".ComputerScience.ZoomLecture"></activity>
+        <activity android:name=".DailyPlanner.EventEditActivity" />
         <activity android:name=".DailyPlanner.WeekViewActivity" />
         <activity android:name=".DailyPlanner.CalendarMain" />
         <activity android:name=".FacultyApp.BooksOrVideos" />

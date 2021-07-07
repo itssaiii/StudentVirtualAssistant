@@ -38,6 +38,7 @@ public class StudentTwoFactorAuthentication extends AppCompatActivity {
 
                 if(code.equals(OriginalCode)){
                     startActivity(new Intent(getApplicationContext(),login_design.class));
+                    finish();
                 }
                 else{
                     Toast.makeText(StudentTwoFactorAuthentication.this, "Invalid Code", Toast.LENGTH_SHORT).show();

@@ -6,18 +6,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
-import com.google.firebase.firestore.Source;
 
 public class ForgotPass extends AppCompatActivity {
     public String NumberEnteredByUser;
@@ -65,27 +59,9 @@ public class ForgotPass extends AppCompatActivity {
                     mPhoneNumber.setError("Phone Number must contain 10 digits");
                     return;
                 }
-
-                fstore.collection("USERS").whereEqualTo("Phone-No",num)
-                        .get(Source.SERVER)
-                        .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                            @Override
-                            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                                Intent intent = new Intent(getApplicationContext(),VerifyOtp.class);
-                                intent.putExtra("phoneNo",num);
-                                startActivity(intent);
-
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(ForgotPass.this, "This Number is not associated with any user ", Toast.LENGTH_SHORT).show();
-                    }
-                });
-                
-
-
-
+                Intent intent = new Intent(getApplicationContext(),VerifyOtp.class);
+                intent.putExtra("phoneNo",num);
+                startActivity(intent);
 
             }
         });

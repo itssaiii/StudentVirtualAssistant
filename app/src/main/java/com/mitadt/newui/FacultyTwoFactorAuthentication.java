@@ -35,6 +35,7 @@ public class FacultyTwoFactorAuthentication extends AppCompatActivity {
                 String OriginalCode = "fgzxsr7b";
                 if(code.equals(OriginalCode)){
                     startActivity(new Intent(getApplicationContext(), FacultyLogin.class));
+                    finish();
                 }
                 else{
                     Toast.makeText(FacultyTwoFactorAuthentication.this, "Invalid Code", Toast.LENGTH_SHORT).show();

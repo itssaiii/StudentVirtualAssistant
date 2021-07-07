@@ -1,14 +1,14 @@
 package com.mitadt.newui.InfoTech;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.mitadt.newui.MainPage;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import com.mitadt.newui.R;
+import com.mitadt.newui.SelectOptionsRevision;
 
 public class InformationTechnology extends AppCompatActivity implements View.OnClickListener {
 
@@ -40,12 +40,12 @@ public class InformationTechnology extends AppCompatActivity implements View.OnC
     public void onClick(View v) {
 
         switch (v.getId()){
-            case R.id.adsa: startActivity(new Intent(getApplicationContext(), MainPage.class));break;
-            case R.id.webtech: startActivity(new Intent(getApplicationContext(),MainPage.class)); break;
-            case R.id.compnetwork: startActivity(new Intent(getApplicationContext(),MainPage.class)); break;
-            case R.id.sepm: startActivity(new Intent(getApplicationContext(),MainPage.class)); break;
-            case R.id.ictt: startActivity(new Intent(getApplicationContext(),MainPage.class)); break;
-            case R.id.french: startActivity(new Intent(getApplicationContext(),MainPage.class)); break;
+            case R.id.adsa: startActivity(new Intent(getApplicationContext(), SelectOptionsRevision.class));break;
+            case R.id.webtech: startActivity(new Intent(getApplicationContext(),SelectOptionsRevision.class)); break;
+            case R.id.compnetwork: startActivity(new Intent(getApplicationContext(),SelectOptionsRevision.class)); break;
+            case R.id.sepm: startActivity(new Intent(getApplicationContext(),SelectOptionsRevision.class)); break;
+            case R.id.ictt: startActivity(new Intent(getApplicationContext(),SelectOptionsRevision.class)); break;
+            case R.id.french: startActivity(new Intent(getApplicationContext(),SelectOptionsRevision.class)); break;
 
             default:break;
 
